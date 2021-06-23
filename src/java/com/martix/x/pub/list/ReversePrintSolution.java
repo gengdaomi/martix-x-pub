@@ -23,6 +23,14 @@ import java.util.Stack;
  */
 public class ReversePrintSolution {
 
+    /**
+     * 运用栈
+     * O(n) O(n)
+     *
+     * 当然也可以反转链表
+     * @param head
+     * @return
+     */
     public int[] reversePrint(ListNode head) {
         Stack<Integer>stack = new Stack<>();
 

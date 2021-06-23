@@ -19,8 +19,19 @@ package com.martix.x.pub.list;
 public class ReorderListSolution {
 
     /**
-     * 运用快慢指针，先找到链表的中间节点
+     * 运用快慢指针，
      *
+     * 核心：
+     * 寻找链表中点 + 链表逆序 + 合并链表
+     *
+     * 注意到目标链表即为将原链表的左半端和反转后的右半端合并后的结果
+     * 这样我们的任务即可划分为三步：
+     *
+     * 1.找到原链表的中点
+     * 2.将原链表的右半端反转
+     * 3.将原链表的两端合并
+     *
+     * 时间复杂度O(n)  空间复杂度O(1)
      * @param head
      */
     public void reorderList(ListNode head) {
