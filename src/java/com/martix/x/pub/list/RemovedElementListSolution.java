@@ -47,4 +47,35 @@ public class RemovedElementListSolution {
 
         return result.next;
     }
+
+    /**
+     * 时空复杂度O(n)
+     *
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements_1(ListNode head, int val) {
+        if (head == null) {
+            return head;
+        }
+
+        head.next = removeElements_1(head.next, val);
+        return head.val == val ? head.next : head;
+    }
+
+    public ListNode removeElements_2(ListNode head, int val) {
+        ListNode dummyHead = new ListNode(0);
+        dummyHead.next = head;
+        ListNode temp = dummyHead;
+
+        while (temp.next != null) {
+            if (temp.next.val == val) {
+                temp.next = temp.next.next;
+            } else {
+                temp = temp.next;
+            }
+        }
+        return dummyHead.next;
+    }
 }
