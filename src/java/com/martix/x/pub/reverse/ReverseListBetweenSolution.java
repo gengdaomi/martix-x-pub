@@ -86,7 +86,7 @@ public class ReverseListBetweenSolution {
     private ListNode reverseN_1(ListNode listNode, int n) {
         int count = 0; //计数器
 
-        ListNode cur = listNode, pre = listNode;
+        ListNode cur = listNode, pre = null;
         while (count < n && cur != null) {
             post = cur.next;
             cur.next = pre;
