@@ -36,7 +36,7 @@ public class SingletonDCL {
     private SingletonDCL() {
     }
 
-    public SingletonDCL getSingletonDCL() {
+    public static SingletonDCL getSingletonDCL() {
         if (singletonDCL == null) {
             synchronized (SingletonDCL.class) {
                 if (singletonDCL == null) {
