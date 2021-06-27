@@ -63,14 +63,3 @@ public class KLinkedMergeSolution {
 
     }
 }
-
-class ListNode {
-
-    ListNode next;
-    Integer val;
-
-    public ListNode(Integer val) {
-        this.val = val;
-        this.next = null;
-    }
-}
