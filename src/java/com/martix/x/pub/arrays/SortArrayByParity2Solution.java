@@ -5,9 +5,9 @@ package com.martix.x.pub.arrays;
  * <p>
  * 按奇偶排序数组 II lc 922
  * <p>
- * 给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。
+ * 给定一个非负整数数组A， A 中一半整数是奇数，一半整数是偶数。
  * <p>
- * 对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。
+ * 对数组进行排序，以便当A[i] 为奇数时，i也是奇数；当A[i]为偶数时， i 也是偶数。
  * <p>
  * 你可以返回任何满足上述条件的数组作为答案。
  * <p>
@@ -62,16 +62,19 @@ public class SortArrayByParity2Solution {
     }
 
     /**
-     * 双指针
+     * 双指针的方式
      *
+     * 设置两个指针，j i分别初始化为奇数和偶数的指针，
+     * 依次遍历数组，步长都为2
+     * 用i遍历数组的时候，将j依次遍历，
      * @param nums
      * @return
      */
     public int[] sortArrayByParityII_1(int[] nums) {
         int n = nums.length;
-        int j = 1;
+        int j = 1; //j作为奇数的下标
 
-        for (int i = 0; i < n; i += 2) {
+        for (int i = 0; i < n; i += 2) { //i作为偶数的下标
             if (nums[i] % 2 == 1) {
 
                 while (nums[j] % 2 == 1 & j < n) {
