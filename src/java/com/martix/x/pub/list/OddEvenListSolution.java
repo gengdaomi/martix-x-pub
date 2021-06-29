@@ -53,7 +53,7 @@ public class OddEvenListSolution {
             return head;
         }
 
-        ListNode evenHead = head.next;
+        ListNode evenHead = head.next; //偶指针
         ListNode odd = head, even = evenHead;
 
         while (even != null && even.next != null) {
