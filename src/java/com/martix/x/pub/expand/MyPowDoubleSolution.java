@@ -8,13 +8,20 @@ package com.martix.x.pub.expand;
  */
 public class MyPowDoubleSolution {
 
+    /**
+     * * 快速幂思想
+     * 求斐波那契数列的第n项，我们就可以通过快速幂将复杂度降到O(logn)，
+     * @param x
+     * @param n
+     * @return
+     */
     public double myPow(double x, int n) {
         double res = 1;
-        long a = 1l*n;
+        long a = 1l * n;
 
-        if(n<0){
-            x=1/x;
-            a=-a;
+        if (n < 0) {
+            x = 1 / x;
+            a = -a;
         }
 
         while (a > 0) {
@@ -33,6 +40,6 @@ public class MyPowDoubleSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new MyPowDoubleSolution().myPow(2,-2));
+        System.out.println(new MyPowDoubleSolution().myPow(2, -2));
     }
 }

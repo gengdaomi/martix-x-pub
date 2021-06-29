@@ -20,6 +20,8 @@ public class CloneGraphSolution {
     private Map<Node, Node> visitedHashMap = new HashMap<>(); //key 为旧的节点 ，value 为新的节点
 
     /**
+     * 深度优先搜索
+     *
      * 为了防止多次遍历同一个节点，陷入死循环，我们需要用一种数据结构记录已经被克隆过的节点
      * <p>
      * 核心思想：

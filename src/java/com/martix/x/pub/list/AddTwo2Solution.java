@@ -10,13 +10,9 @@ import java.util.Stack;
  * <p>
  * 你可以假设除了数字 0 之外，这两个数字都不会以零开头。
  * <p>
- *  
- * <p>
  * 进阶：
  * <p>
  * 如果输入链表不能修改该如何处理？换句话说，你不能对列表中的节点进行翻转。
- * <p>
- *  
  * <p>
  * 示例：
  * <p>
@@ -116,11 +112,12 @@ public class AddTwo2Solution {
 
     /**
      * addTwoNumbers_1的变种，即省掉结果resultStack
+     *
      * @param l1
      * @param l2
      * @return
      */
-    public ListNode addTwoNumbers_1_1(ListNode l1, ListNode l2){
+    public ListNode addTwoNumbers_1_1(ListNode l1, ListNode l2) {
         Stack<Integer> l1Stack = new Stack<>();
         Stack<Integer> l2Stack = new Stack<>();
 
@@ -140,7 +137,7 @@ public class AddTwo2Solution {
             int l2Val = l2Stack.isEmpty() ? 0 : l2Stack.pop();
             int sum = l1Val + l2Val + tempVal;
 
-            ListNode cur = new ListNode(sum%10);
+            ListNode cur = new ListNode(sum % 10);
             tempVal = sum >= 10 ? sum / 10 : 0;
 
             cur.next = result;

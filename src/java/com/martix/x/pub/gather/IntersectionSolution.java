@@ -1,6 +1,5 @@
 package com.martix.x.pub.gather;
 
-import javax.lang.model.type.ArrayType;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,7 +10,6 @@ import java.util.Set;
  * <p>
  * 给定两个数组，编写一个函数来计算它们的交集。
  * <p>
- *  
  * <p>
  * 示例 1：
  * <p>
