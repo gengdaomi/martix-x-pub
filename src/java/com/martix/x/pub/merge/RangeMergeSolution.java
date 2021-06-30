@@ -21,6 +21,11 @@ import java.util.stream.Stream;
  */
 public class RangeMergeSolution {
 
+    /**
+     * 按照左端点进行排序，那么在排完序的列表中，可以合并的区间一定是连续的
+     * @param intervals
+     * @return
+     */
     public List<Interval> merge(List<Interval> intervals) {
         if (intervals == null || intervals.size() == 0) {
             return new ArrayList<>();

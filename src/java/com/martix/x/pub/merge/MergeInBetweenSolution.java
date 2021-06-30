@@ -5,9 +5,9 @@ package com.martix.x.pub.merge;
  * Created by Andrew-Geng on 2:38 上午 2021/5/9
  * 合并两个链表 lc 1669
  * <p>
- * 给你两个链表 list1 和 list2 ，它们包含的元素分别为 n 个和 m 个。
+ * 给你两个链表list1 和list2，它们包含的元素分别为n 个和m 个。
  * <p>
- * 请你将 list1 中第 a 个节点到第 b 个节点删除，并将list2 接在被删除节点的位置。
+ * 请你将list1中第a个节点到第b个节点删除，并将list2接在被删除节点的位置。
  * <p>
  * 下图中蓝色边和节点展示了操作后的结果：
  * <p>
@@ -19,14 +19,14 @@ package com.martix.x.pub.merge;
  */
 public class MergeInBetweenSolution {
 
-    public com.martix.x.merge.ListNode mergeInBetween(com.martix.x.merge.ListNode list1, int a, int b, com.martix.x.merge.ListNode list2) {
-        com.martix.x.merge.ListNode list2Tail = list2;
+    public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
+        ListNode list2Tail = list2;
 
         while (list2Tail.next != null) { //寻找链表2的尾结点
             list2Tail = list2Tail.next;
         }
 
-        com.martix.x.merge.ListNode list1A = list1, list1B = list1;
+        ListNode list1A = list1, list1B = list1;
         int count = 1;
         while (count < a) { //找到a-1位置的节点，因为要从a到b之间都要删除
             list1A = list1A.next;

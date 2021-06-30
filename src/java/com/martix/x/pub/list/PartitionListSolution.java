@@ -36,8 +36,8 @@ public class PartitionListSolution {
             return head;
         }
 
-        ListNode result = new ListNode(0);
-        ListNode larger = new ListNode(0);
+        ListNode result = new ListNode(0); //按顺序存储所有小于x的节点
+        ListNode larger = new ListNode(0);  //按顺序存储所有大于等于x的节点
         ListNode curResult = result, curLarge = larger;
 
         while (head != null) {
