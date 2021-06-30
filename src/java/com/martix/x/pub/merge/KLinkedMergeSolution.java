@@ -45,7 +45,7 @@ public class KLinkedMergeSolution {
             return null;
         }
 
-        return merge(lists, 0, lists.length - 1);
+        return this.merge(lists, 0, lists.length - 1);
     }
 
     private ListNode merge(ListNode[] lists, int left, int right) {
@@ -66,28 +66,34 @@ public class KLinkedMergeSolution {
      * 借助归并排序的思想，只有治没有分c
      */
     private ListNode merge(ListNode l1, ListNode l2) {
-        ListNode res = new ListNode(0);
-        ListNode tail = res;
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
 
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
         while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
-                tail.next = l1;
+            if (l1.val <= l2.val) {
+                cur.next = l1;
+                cur = cur.next;
                 l1 = l1.next;
             } else {
-                tail.next = l2;
+                cur.next = l2;
+                cur = cur.next;
                 l2 = l2.next;
             }
-
-            tail = tail.next;
         }
 
         if (l1 != null) {
-            tail.next = l1;
+            cur.next = l1;
         } else {
-            tail.next = l2;
+            cur.next = l2;
         }
 
-        return res.next;
+        return head.next;
     }
 
     public static void main(String[] args){
