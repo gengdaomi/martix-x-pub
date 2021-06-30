@@ -1,6 +1,7 @@
 package com.martix.x.pub.merge;
 
 /**
+ * lc 23 hard
  * 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度
  * <p>
  * 输入:
@@ -33,6 +34,33 @@ public class KLinkedMergeSolution {
         }
         return len != 0 ? lists[0] : null;
     }
+
+    /**
+     * 分治
+     * @param lists
+     * @return
+     */
+    public ListNode mergeKLists_1(ListNode[] lists) {
+        if (lists == null || lists.length == 0){
+            return null;
+        }
+
+        return merge(lists, 0, lists.length - 1);
+    }
+
+    private ListNode merge(ListNode[] lists, int left, int right) {
+        if (left == right){
+            return lists[left];
+        }
+
+        int mid = left + (right - left) / 2;
+
+        ListNode l1 = merge(lists, left, mid);
+        ListNode l2 = merge(lists, mid + 1, right);
+
+        return this.merge(l1, l2);
+    }
+
 
     /**
      * 借助归并排序的思想，只有治没有分c
