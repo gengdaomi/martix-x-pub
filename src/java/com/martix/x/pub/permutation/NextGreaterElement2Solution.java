@@ -72,6 +72,12 @@ public class NextGreaterElement2Solution {
         return 0;
     }
 
+    /**
+     * 表示从index位置开始进行数组倒序
+     * @param nums
+     * @param index
+     * @return
+     */
     private char[] reverse(char[] nums, int index) {
         int left = index, right = nums.length - 1;
 
