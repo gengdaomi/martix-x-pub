@@ -1,9 +1,13 @@
 package com.martix.x.pub.permutation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by ayue on 下午3:55 2018/7/6
  * <p>
  * 给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
+ * lc 60
  * <p>
  * 按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：
  * <p>
@@ -30,6 +34,43 @@ public class kthLargestPermutationSolution {
 
 
     public static void main(String[] args) {
+    }
+
+    /**
+     * 时间复杂度O(n^2)  空间复杂度O(n)
+     * @param n
+     * @param k
+     * @return
+     */
+    public String getPermutation_0(int n,int k){
+        if (n <= 1){
+            return "" + n;
+        }
+
+        List<Integer> arrayList = new ArrayList<Integer>();
+        for (int i = 1; i <= n; i++) {
+            arrayList.add(i);
+        }
+
+        StringBuilder result = new StringBuilder();
+        k--;
+
+        while (n > 0) {
+            //先求出n-1的阶乘
+            int val = 1;
+            for (int i = 1; i < n; i++) {
+                val *= i;
+            }
+
+            int index = k / val;
+            result.append(arrayList.get(index));
+            arrayList.remove(index);
+
+            k = k % val;
+            n--;
+        }
+
+        return result.toString();
     }
 
     //相当于因式分解
