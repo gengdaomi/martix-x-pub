@@ -3,7 +3,7 @@ package com.martix.x.pub.palindrome;
 /**
  * Created by Andrew-Geng on 1:28 上午 2021/4/14
  * 验证回文字符串 Ⅱ lc 680
- * 给定一个非空字符串 s，最多删除一个字符。判断是否能成为回文字符串。
+ * 给定一个非空字符串s，最多删除一个字符。判断是否能成为回文字符串。
  * <p>
  * 示例 1:
  * <p>
