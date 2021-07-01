@@ -31,11 +31,27 @@ public class AddDigitsSolution {
 
     /**
      * 除个位外，每一位上的值都是通过 (9+1) 进位的过程得到的
+     *
      * @param nums
      * @return
      */
     public int addDigits_1(int nums) {
         return (nums - 1) % 9 + 1;
+    }
+
+    /**
+     * 能够被9整除的整数，各位上的数字加起来也必然能被9整除，所以，连续累加起来，最终必然就是9。
+     * 不能被9整除的整数，各位上的数字加起来，结果对9取模，和初始数对9取摸，是一样的，所以，连续累加起来，最终必然就是初始数对9取摸。
+     *
+     * @param nums
+     * @return
+     */
+    public int addDigits_2(int nums) {
+        if (0 == nums % 9) {
+            return 9;
+        }
+
+        return nums % 9;
     }
 
     /**
