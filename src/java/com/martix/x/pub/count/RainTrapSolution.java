@@ -15,7 +15,7 @@ package com.martix.x.pub.count;
 public class RainTrapSolution {
 
     public static void main(String[] args) {
-        int[] i = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        int[] i = new int[]{3,1,2,5,2,4};
         System.out.println(new RainTrapSolution().trap_1(i));
     }
 

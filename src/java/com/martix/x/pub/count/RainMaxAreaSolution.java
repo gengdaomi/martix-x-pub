@@ -34,6 +34,10 @@ package com.martix.x.pub.count;
  */
 public class RainMaxAreaSolution {
 
+    public static void main(String[] args){
+        System.out.println(new RainMaxAreaSolution().maxArea(new int[]{3,1,2,5,2,4}));
+    }
+
     /**
      * 双指针代表的是 可以作为容器边界的所有位置的范围。在一开始，双指针指向数组的左右边界，
      * 表示 数组中所有的位置都可以作为容器的边界，因为我们还没有进行过任何尝试。在这之后，
