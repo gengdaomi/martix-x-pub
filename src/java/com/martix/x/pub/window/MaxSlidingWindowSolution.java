@@ -1,9 +1,8 @@
 package com.martix.x.pub.window;
 
-import com.martix.x.pub.queue.MonotonicQueueSolution;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,7 +10,8 @@ import java.util.List;
  * <p>
  * 滑动窗口最大值 lc 239
  * <p>
- * 给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
+ * 给你一个整数数组 nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。
+ * 你只可以看到在滑动窗口内的 k个数字。滑动窗口每次只向右移动一位。
  * <p>
  * 返回滑动窗口中的最大值。
  * <p>
@@ -21,7 +21,7 @@ import java.util.List;
 public class MaxSlidingWindowSolution {
 
     /**
-     * 借助单调队列来实现
+     * 借助单调队列来实现 + 滑动窗口
      * 时间复杂度O(n) 空间复杂度 O(k)
      *
      * @param nums
@@ -29,16 +29,16 @@ public class MaxSlidingWindowSolution {
      * @return
      */
     public int[] maxSlidingWindow(int[] nums, int k) {
-        MonotonicQueueSolution monotonicQueueSolution = new MonotonicQueueSolution();
+        MonotonicQueue monotonicQueue = new MonotonicQueue();
         List<Integer> resultList = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
             if (i < k - 1) { //表示窗口还没有满
-                monotonicQueueSolution.push_back(nums[i]);
+                monotonicQueue.push_back(nums[i]);
             } else {//表示一个窗口已经满了
-                monotonicQueueSolution.push_back(nums[i]);
-                resultList.add(monotonicQueueSolution.max_value()); //将当前窗口的最大值装入
-                monotonicQueueSolution.pop_front();
+                monotonicQueue.push_back(nums[i]);
+                resultList.add(monotonicQueue.max_value()); //将当前窗口的最大值装入
+                monotonicQueue.pop_front();
             }
         }
 
@@ -48,6 +48,51 @@ public class MaxSlidingWindowSolution {
         }
 
         return arr;
+    }
+
+    /**
+     * 单调递减队列
+     */
+    class MonotonicQueue {
+
+        private LinkedList<Integer> oLinkedList;
+        private LinkedList<Integer> mLinkedList;
+
+        public MonotonicQueue() {
+            oLinkedList = new LinkedList<>();
+            mLinkedList = new LinkedList<>();
+        }
+
+        public int max_value() {
+            if (!mLinkedList.isEmpty()) {
+                return mLinkedList.getFirst();
+            }
+
+            return -1;
+        }
+
+        public void push_back(int value) {
+            while (!mLinkedList.isEmpty() && mLinkedList.getLast() < value) {
+                mLinkedList.pollLast();
+            }
+
+            oLinkedList.addLast(value);
+            mLinkedList.addLast(value);
+
+        }
+
+        public int pop_front() {
+            if (oLinkedList.isEmpty()) {
+                return -1;
+            }
+
+            int val = oLinkedList.pollFirst();
+            if (val == mLinkedList.getFirst()) {
+                mLinkedList.pollFirst();
+            }
+
+            return val;
+        }
     }
 
     public static void main(String[] args) {

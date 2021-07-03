@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * Created by Andrew-Geng on 2:44 下午 2021/3/25
  * <p>
- * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度
+ * 给定一个字符串，请你找出其中不含有重复字符的最长子串的长度
  * lc:3
  * <p>
  * 输入: s = "abcabcbb"

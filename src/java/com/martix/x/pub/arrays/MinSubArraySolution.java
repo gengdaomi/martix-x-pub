@@ -1,4 +1,4 @@
-package com.martix.x.pub.window;
+package com.martix.x.pub.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
