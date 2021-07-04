@@ -4,9 +4,9 @@ package com.martix.x.pub.prefix;
  * Created by Andrew-Geng on 12:33 上午 2021/5/19
  * 乘积小于K的子数组 lc 713
  * <p>
- * 给定一个正整数数组 nums。
+ * 给定一个正整数数组nums。
  * <p>
- * 找出该数组内乘积小于 k 的连续的子数组的个数。
+ * 找出该数组内乘积小于k的连续的子数组的个数。
  * <p>
  * 示例 1:
  * <p>
