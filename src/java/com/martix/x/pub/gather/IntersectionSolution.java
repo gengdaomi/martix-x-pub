@@ -90,7 +90,7 @@ public class IntersectionSolution {
         int[] intersection = new int[nums1.length + nums2.length];
         int index = 0, index1 = 0, index2 = 0;
 
-        while (index1 < nums1.length && index2 < nums2.length) {
+        while (index1 < nums1.length && index2 < nums2.length) { //将相等的一个放入数组
             int num1 = nums1[index1];
             int num2 = nums2[index2];
 
