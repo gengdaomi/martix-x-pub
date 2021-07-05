@@ -8,8 +8,6 @@ package com.martix.x.pub.bit;
  * <p>
  * 整数 n 是 4 的幂次方需满足：存在整数 x 使得 n == 4x
  * <p>
- *  
- * <p>
  * 示例 1：
  * <p>
  * 输入：n = 16
@@ -22,7 +20,6 @@ package com.martix.x.pub.bit;
  * <p>
  * 输入：n = 1
  * 输出：true
- *  
  * <p>
  * 提示：
  * <p>
@@ -50,7 +47,7 @@ public class IsFourPowerSolution {
     }
 
     /**
-     * x 是否为 2 的幂;;x > 0 and x & (x - 1) == 0
+     * x 是否为 2 的幂;x > 0 and x & (x - 1) == 0
      * 可以确定若 x 为 4 的幂则a 为偶数
      * <p>
      * 考虑a=2k 和 a=2k+1 两种情况,
