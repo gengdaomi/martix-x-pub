@@ -8,8 +8,6 @@ import java.util.Arrays;
  * <p>
  * 给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
  * <p>
- *  
- * <p>
  * 示例 1：
  * <p>
  * 输入：nums = [-4,-1,0,3,10]
@@ -27,7 +25,6 @@ import java.util.Arrays;
  * 1 <= nums.length <= 104
  * -104 <= nums[i] <= 104
  * nums 已按 非递减顺序 排序
- *  
  * <p>
  * 进阶：
  * <p>
@@ -51,11 +48,14 @@ public class SortedSquaresSolution {
         int[] result = new int[nums.length];
 
         while (low <= high) {
-            if (nums[low] * nums[low] > nums[high] * nums[high]) {
-                result[index] = nums[low] * nums[low];
+            int lowSquaresVal = nums[low] * nums[low];
+            int highSquaresVal = nums[high] * nums[high];
+
+            if (lowSquaresVal > highSquaresVal) {
+                result[index] = lowSquaresVal;
                 low++;
             } else {
-                result[index] = nums[high] * nums[high];
+                result[index] = highSquaresVal;
                 high--;
             }
 
@@ -74,7 +74,7 @@ public class SortedSquaresSolution {
      * nums[0] 到 nums[neg] 均为负数
      * nums[neg+1] 到 nums[n−1] 均为非负数
      * <p>
-     * 当我们将数组nums 中的数平方后，那么nums[0] 到  nums[neg] 单调递减，nums[neg+1] 到 nums[n−1] 单调递增
+     * 当我们将数组nums 中的数平方后，那么nums[0] 到 nums[neg] 单调递减，nums[neg+1] 到 nums[n−1] 单调递增
      * <p>
      * 时间复杂度 O(n)
      * 空间复杂度 O(1)

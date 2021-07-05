@@ -65,22 +65,6 @@ public class MinNumberSolution {
         return sb.toString();
     }
 
-    public String minNumber_1(int[] nums) {
-        String[] strs = new String[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            strs[i] = String.valueOf(nums[i]);
-        }
-
-        Arrays.sort(strs, (x, y) -> (x + y).compareTo(y + x));
-
-        StringBuilder res = new StringBuilder();
-        for (String s : strs) {
-            res.append(s);
-        }
-
-        return res.toString();
-    }
-
     public void quickSort(String[] arr, int low, int high) {
         if (low >= high) {
             return;
@@ -107,6 +91,27 @@ public class MinNumberSolution {
 
         quickSort(arr, low, left - 1);
         quickSort(arr, left + 1, high);
+    }
 
+    /**
+     * 这个用语言自带的排序函数
+     *
+     * @param nums
+     * @return
+     */
+    public String minNumber_1(int[] nums) {
+        String[] strs = new String[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            strs[i] = String.valueOf(nums[i]);
+        }
+
+        Arrays.sort(strs, (x, y) -> (x + y).compareTo(y + x));
+
+        StringBuilder res = new StringBuilder();
+        for (String s : strs) {
+            res.append(s);
+        }
+
+        return res.toString();
     }
 }

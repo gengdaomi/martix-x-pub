@@ -29,7 +29,31 @@ package com.martix.x.pub.arrays;
 public class SortArrayByParity2Solution {
 
     /**
-     * 两次遍历
+     * 一次遍历
+     *
+     * @param nums
+     * @return
+     */
+    public int[] sortArrayByParityII_0(int[] nums) {
+        int n = nums.length;
+        int[] result = new int[n];
+
+        int i = 0, j = 1;
+        for (int x : nums) { //一次遍历
+            if (x % 2 == 0) {  //偶数的
+                result[i] = x;
+                i += 2;
+            } else {  //奇数的
+                result[j] = x;
+                j += 2;
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * 两次遍历 这个不如第一个方法
      * 遍历一遍数组把所有的偶数放进 ans[0]，ans[2]，ans[4]，依次类推。
      * <p>
      * 再遍历一遍数组把所有的奇数依次放进 ans[1]，ans[3]，ans[5]，依次类推。
@@ -63,10 +87,11 @@ public class SortArrayByParity2Solution {
 
     /**
      * 双指针的方式
-     *
+     * <p>
      * 设置两个指针，j i分别初始化为奇数和偶数的指针，
      * 依次遍历数组，步长都为2
      * 用i遍历数组的时候，将j依次遍历，
+     *
      * @param nums
      * @return
      */

@@ -7,12 +7,11 @@ import java.util.List;
  * Created by Andrew-Geng on 3:51 下午 2021/4/28
  * <p>
  * 长度最小的子数组
- * <p>
  * lc 209
  * <p>
  * 给定一个含有n个正整数的数组和一个正整数 target 。
  * <p>
- * 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组[numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。
+ * 找出该数组中存在一个子数组满足其和 ≥ target， 长度最小的连续子数组[numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。
  * <p>
  * 示例 1：
  * <p>
