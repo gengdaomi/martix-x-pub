@@ -51,15 +51,27 @@ public class ShipWithinDaysSolution {
     }
 
     /**
+     * 二分查找的初始左右边界:
+     * 对于左边界而言，由于我们不能「拆分」一个包裹，因此船的运载能力不能小于所有包裹中最重的那个的重量，即左边界为数组weights 中元素的最大值;
+     * 对于右边界而言，船的运载能力也不会大于所有包裹的重量之和，即右边界为数组 weights 中元素的和
+     *
      * 时间复杂度O(NlogN) 空间复杂度O(1)
      * @param weights
      * @param D
      * @return
      */
     public int shipWithinDays(int[] weights, int D) {
-        int lo = 0, hi = Integer.MAX_VALUE;
+        int max = 0, sum = 0;
+        for (int w : weights) {
+
+            max = Math.max(max, w);
+            sum += w;
+        }
+
+        int lo = max, hi = sum;
         while (lo < hi) {
             int mid = lo + (hi - lo) / 2;
+
             if (canShip(weights, D, mid)) {
                 hi = mid;
             } else {
