@@ -9,7 +9,7 @@ package com.martix.x.pub.expand;
 public class MyPowDoubleSolution {
 
     /**
-     * * 快速幂思想
+     * 快速幂思想
      * 求斐波那契数列的第n项，我们就可以通过快速幂将复杂度降到O(logn)，
      * @param x
      * @param n
