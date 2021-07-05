@@ -45,40 +45,13 @@ public class SearchRotateArraySolution {
     }
 
     /**
-     * 双指针的思路，本身已经是排序后的旋转数组，那么旋转后还是排序的
-     *
-     * @param nums
-     * @param target
-     * @return
-     */
-    public int search(int[] nums, int target) {
-        int left = 0, right = nums.length;
-
-        while (left < right) {
-            if (nums[left] == target) {
-                return left;
-            } else if (nums[left] > target) {
-                if (nums[right - 1] == target) {
-                    return right - 1;
-                } else {
-                    right--;
-                }
-            } else if (nums[left] < target) {
-                left++;
-            }
-        }
-
-        return left == right ? -1 : left;
-    }
-
-    /**
      * 时间复杂度：O(logn)
      * 空间复杂度O(1)
      * @param nums
      * @param target
      * @return
      */
-    public int search_1(int[] nums, int target) {
+    public int search(int[] nums, int target) {
         if (nums.length == 0) {
             return -1;
         }
@@ -111,4 +84,32 @@ public class SearchRotateArraySolution {
         }
         return -1;
     }
+
+    /**
+     * 双指针的思路，本身已经是排序后的旋转数组，那么旋转后还是排序的
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int search_1(int[] nums, int target) {
+        int left = 0, right = nums.length;
+
+        while (left < right) {
+            if (nums[left] == target) {
+                return left;
+            } else if (nums[left] > target) {
+                if (nums[right - 1] == target) {
+                    return right - 1;
+                } else {
+                    right--;
+                }
+            } else if (nums[left] < target) {
+                left++;
+            }
+        }
+
+        return left == right ? -1 : left;
+    }
+
 }

@@ -13,8 +13,6 @@ package com.martix.x.pub.binary;
  * <p>
  * 给你一个可能存在 重复 元素值的数组 nums ，它原来是一个升序排列的数组，并按上述情形进行了多次旋转。请你找出并返回数组中的 最小元素 。
  * <p>
- *  
- * <p>
  * 示例 1：
  * <p>
  * 输入：nums = [1,3,5]
@@ -23,7 +21,6 @@ package com.martix.x.pub.binary;
  * <p>
  * 输入：nums = [2,2,2,0,1]
  * 输出：0
- *  
  * <p>
  * 提示：
  * <p>
@@ -31,7 +28,6 @@ package com.martix.x.pub.binary;
  * 1 <= n <= 5000
  * -5000 <= nums[i] <= 5000
  * nums 原来是一个升序排序的数组，并进行了 1 至 n 次旋转
- *  
  * <p>
  * 进阶：
  * <p>
