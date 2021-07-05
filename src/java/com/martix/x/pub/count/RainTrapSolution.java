@@ -84,6 +84,10 @@ public class RainTrapSolution {
     }
 
     /**
+     *
+     * water[i]=min(max(height[0..i]),max(height[i..n-1]))-height[i]，
+     * 即表示第i个位置的雨水量，由i左边方格最高值，和 i右边方格最高值 的最小值决定，并最后减去i的方格高度
+     * <p>
      * 借助双指针的思路，进一步降低空间复杂度 到 O(1)
      *
      * @param height
