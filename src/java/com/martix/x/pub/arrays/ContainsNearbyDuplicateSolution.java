@@ -26,6 +26,12 @@ import java.util.Set;
  */
 public class ContainsNearbyDuplicateSolution {
 
+    public static void main(String[] args){
+        int[] nums = new int[]{1,0,1,1};
+        boolean t = new ContainsNearbyDuplicateSolution().containsNearbyDuplicate(nums,1);
+        System.out.println(t);
+    }
+
     /**
      * hash 表的方式
      *

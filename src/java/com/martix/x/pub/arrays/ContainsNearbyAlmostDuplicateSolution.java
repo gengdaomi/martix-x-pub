@@ -41,7 +41,8 @@ public class ContainsNearbyAlmostDuplicateSolution {
         TreeSet<Long> set = new TreeSet<Long>();
 
         for (int i = 0; i < n; i++) {
-            Long ceiling = set.ceiling((long) nums[i] - (long) t);  //方法返回在这个集合中大于或者等于给定元素的最小元素，如果不存在这样的元素,返回nul
+            //方法返回在这个集合中大于或者等于给定元素的最小元素，如果不存在这样的元素,返回null
+            Long ceiling = set.ceiling((long) nums[i] - (long) t);
 
             if (ceiling != null && ceiling <= (long) nums[i] + (long) t) {
                 return true;

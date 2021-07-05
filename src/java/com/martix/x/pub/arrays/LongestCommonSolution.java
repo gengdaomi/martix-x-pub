@@ -39,12 +39,16 @@ public class LongestCommonSolution {
         int count = strs.length;
         String prefix = "";
 
-        if (count != 0) {
-            prefix = strs[0];
+        if (count == 0) {
+            return prefix;
         }
 
-        for (int i = 0; i < count; i++) {
-            //关键代码，不断的从后往前截取字符串，然后与之相比，直到startsWith()返回true
+        prefix = strs[0];
+        for (int i = 1; i < count; i++) {
+            /*
+            关键代码，不断将前缀字符串从后往前一个个的截取字符，然后与str数组中的字符串相比，直到startsWith()返回true；
+            然后再去比较str数组的下一个字符串，求prefix的最小值
+             */
             while (!strs[i].startsWith(prefix)) {
                 prefix = prefix.substring(0, prefix.length() - 1);
             }

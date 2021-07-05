@@ -12,9 +12,7 @@ import java.util.Set;
  * lc 128 hard
  * 给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。
  * <p>
- *  
- * <p>
- * 进阶：你可以设计并实现时间复杂度为 O(n) 的解决方案吗？
+ * 进阶：你可以设计并实现时间复杂度为O(n) 的解决方案吗？
  * <p>
  * 示例 1：
  * <p>
@@ -43,6 +41,7 @@ public class LongestArraySolution {
      * * 但是！！总是有坑在等着我们跳：nums数组存在重复数字。
      * *
      * * 假设nums[] 数组为[2,4,3,3]，按照上面的逻辑，map（key->value）中2->1，4->1，当遇到3时，因为左右两端都存在，因此会直接更新2->2，4->2，再次遇到3，2->3，4->3，于是我们需要判断是否已经处理过3这个重复数字，方法就是每次处理的数字nums[i]，也在map中更新它的值，
+     * <p>
      * * 并且在遍历的时候先判断nums[i].value是不是0，如果不是0，那么意味着前面我们处理过了，直接跳过就好。
      *
      * @param nums
@@ -57,17 +56,19 @@ public class LongestArraySolution {
                 int left = map.getOrDefault(i - 1, 0);
                 int right = map.getOrDefault(i + 1, 0);
 
-                map.put(i, 1 + left + right);
+                int length = 1 + left + right;
+                map.put(i, length);
                 if (left != 0) {
-                    map.put(i - left, left + right + 1);
+                    map.put(i - left, length);
                 }
                 if (right != 0) {
-                    map.put(i + right, left + right + 1);
+                    map.put(i + right, length);
                 }
 
-                max = max > left + right + 1 ? max : left + right + 1;
+                max = max > length ? max : length;
             }
         }
+
         return max;
     }
 
