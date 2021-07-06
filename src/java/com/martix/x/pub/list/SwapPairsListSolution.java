@@ -41,11 +41,10 @@ public class SwapPairsListSolution {
 
     /**
      * 也可以通过迭代的方式实现两两交换链表中的节点。
-     * <p>
-     * 创建哑结点 dummyHead，令 dummyHead.next = head。令 listNode 表示当前到达的节点，初始时 listNode = dummyHead。每次需要交换 listNode 后面的两个节点。
-     * <p>
-     * 如果 listNode 的后面没有节点或者只有一个节点，则没有更多的节点需要交换，因此结束交换。否则，获得 listNode 后面的两个节点 node1 和 node2，通过更新节点的指针关系实现两两交换节点。
-     * <p>
+     * 创建哑结点 dummyHead，令 dummyHead.next = head。令 listNode 表示当前到达的节点，初始时 listNode = dummyHead。
+     * 每次需要交换 listNode 后面的两个节点。
+     * 如果 listNode 的后面没有节点或者只有一个节点，则没有更多的节点需要交换，因此结束交换。
+     * 否则，获得 listNode 后面的两个节点 node1 和 node2，通过更新节点的指针关系实现两两交换节点。
      * 具体而言，交换之前的节点关系是 listNode -> node1 -> node2，交换之后的节点关系要变成 listNode -> node2 -> node1，因此需要进行如下操作。
      * <p>
      * <p>

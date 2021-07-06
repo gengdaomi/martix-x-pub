@@ -19,8 +19,15 @@ public class SortListSolution {
     public static void main(String[] args) {
     }
 
+    /**
+     * 核心思路：
+     * 通过归并的手法，先把这个链表拆分成两个子链表
+     *
+     * @param head
+     * @return
+     */
     public ListNode sortList(ListNode head) {
-        if (head == null || head.next == null){
+        if (head == null || head.next == null) {
             return head;
         }
 
@@ -29,7 +36,8 @@ public class SortListSolution {
         ListNode slow = head;
         while (fast.next != null) {
             fast = fast.next.next;
-            if (fast == null){// 让slow少走一步，结点数目均匀
+
+            if (fast == null) {// 让slow少走一步，结点数目均匀
                 break;
             }
 
@@ -72,6 +80,37 @@ public class SortListSolution {
         }
 
         return result;
+    }
+
+    private ListNode mergeTwoLists_1(ListNode l1, ListNode l2) {
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
+
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                cur.next = l1;
+                cur = cur.next;
+                l1 = l1.next;
+            } else {
+                cur.next = l2;
+                cur = cur.next;
+                l2 = l2.next;
+            }
+        }
+
+        if (l1 != null) {
+            cur.next = l1;
+        } else {
+            cur.next = l2;
+        }
+
+        return head.next;
     }
 
 }
