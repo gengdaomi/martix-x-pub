@@ -44,7 +44,9 @@ public class PalindromeIntegerValidateSolution {
     public boolean isPalindrome(int x) {
         int a = x, h = 1;
 
-        if (a < 0) return false;
+        if (a < 0){
+            return false;
+        }
 
         while (a / h >= 10) {
             h = h * 10;
