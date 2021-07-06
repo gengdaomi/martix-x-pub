@@ -64,9 +64,8 @@ public class AddTwoSolution {
      * <p>
      * 输入：(6 -> 1 -> 7) + (2 -> 9 -> 5)，即617 + 295
      * 输出：9 -> 1 -> 2，即912
-     *
+     * <p>
      * 解题思路，即对两个链表反转 然后按照上面的方式相加，然后再把结果数组反转
-     *
      *
      * @param l1
      * @param l2
@@ -76,16 +75,17 @@ public class AddTwoSolution {
         ListNode l1Reverse = this.reverse(l1);
         ListNode l2Reverse = this.reverse(l2);
 
-        ListNode result = addTwoNumbers(l1Reverse,l2Reverse);
+        ListNode result = addTwoNumbers(l1Reverse, l2Reverse);
         return this.reverse(result);
     }
 
     /**
      * 链表的反转
+     *
      * @param listNode
      */
-    private ListNode reverse(ListNode listNode){
-        if(listNode==null || listNode.next==null){
+    private ListNode reverse(ListNode listNode) {
+        if (listNode == null || listNode.next == null) {
             return listNode;
         }
 
