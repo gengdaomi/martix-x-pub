@@ -12,7 +12,6 @@ import java.util.Comparator;
  *
  * 返回将每个人都飞到 a 、b 中某座城市的最低费用，要求每个城市都有 n 人抵达。
  *
- *  
  *
  * 示例 1：
  *
@@ -37,6 +36,12 @@ import java.util.Comparator;
  */
 public class TwoCitySchedCostSolution {
 
+    public static void main(String[] args){
+        int[][]costs = new int[][]{{259,770},{448,54},{926,667},{184,139},{840,118},{577,469}};
+        int result = new TwoCitySchedCostSolution().twoCitySchedCost_1(costs);
+        System.out.println(result);
+    }
+
     /**
      * 核心思路：
      * 贪心
@@ -58,7 +63,12 @@ public class TwoCitySchedCostSolution {
     public int twoCitySchedCost(int[][] costs) {
         // Sort by a gain which company has
         // by sending a person to city A and not to city B
-        Arrays.sort(costs, (o1, o2) -> o1[0] - o1[1] - (o2[0] - o2[1]));
+        Arrays.sort(costs, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0] - o1[1] - (o2[0] - o2[1]);
+            }
+        });
 
         int total = 0;
         int n = costs.length / 2;
@@ -76,24 +86,26 @@ public class TwoCitySchedCostSolution {
      *核心思路：
      * 1.先假设全部去A城市
      * 2.用一个数组保存每个人（去b城市的费用-去a城市的费用）
-     * 3.按从大到小的顺序排序，给费用差数组排序
+     * 3.按从小到大的顺序排序，给费用差数组排序
      * 4。将费用差最小的一半数组的值，加给总费用
      * @param costs
      * @return
      */
     public int twoCitySchedCost_1(int[][] costs) {
-        int res = 0;
+        int result = 0;
         int[] temp = new int[costs.length];
 
         for (int i = 0; i < costs.length; i++) {
             temp[i] = costs[i][1] - costs[i][0];
-            res += costs[i][0];
-        }
-        Arrays.sort(temp);
-        for (int i = 0; i < temp.length/2; i++) {
-            res += temp[i];
+            result += costs[i][0];
         }
 
-        return res;
+        Arrays.sort(temp);
+
+        for (int i = 0; i < temp.length/2; i++) {
+            result += temp[i];
+        }
+
+        return result;
     }
 }
