@@ -47,7 +47,7 @@ public class AddDigitsSolution {
      * @return
      */
     public int addDigits_2(int nums) {
-        if (0 == nums % 9) {
+        if (nums % 9 == 0) {
             return 9;
         }
 

@@ -12,13 +12,12 @@ package com.martix.x.pub.number;
  *  
  *
  * 示例 1：
- *
  * 输入: n = 5, m = 3
- * 输出: 3
- * 示例 2：
+ * 输出:3
  *
+ * 示例 2：
  * 输入: n = 10, m = 17
- * 输出: 2
+ * 输出:2
  *
  *
  *
@@ -43,15 +42,15 @@ public class LastRemainingSolution {
      * 时间空间复杂度O(n)
      */
     public int lastRemaining(int n, int m) {
-        return f(n, m);
+        return fun(n, m);
     }
 
-    private int f(int n, int m) {
+    private int fun(int n, int m) {
         if (n == 1) {
             return 0;
         }
 
-        int x = f(n - 1, m);
+        int x = fun(n - 1, m);
 
         return (m + x) % n;
     }

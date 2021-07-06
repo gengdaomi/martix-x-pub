@@ -28,7 +28,7 @@ public class MaximumSwapSolution {
      * 首先以例子分析要交换的特性，我们会发现，当整数中的所有数字均按照非递增的顺序排序，那么这个整数就是最大整数，不需要进行交换；
      * 所以根据上面的分析，我们需要寻找整数中数字出现不符合非递增规则的分裂点，记录违规的分裂点；
      * 在分裂点的后半部分寻找最大的数字，并且位置越靠后的数字相对前面与其相等的前面的数字交换的意义更大，也就是我们要求寻找digits[j] >= max，注意这里是>=；
-     * 在分裂点的前半部分从后向前寻找小于上一步找到的max的最大值；
+     * 在分裂点的前半部分 从后向前 寻找小于上一步找到的max的最大值；
      * 将找到的两个位置数字进行交换，即可得到交换最大整数。
      * 注意，为了进行操作，需先将整数转化为char数组，并在交换后转换回整数
      * <p>
@@ -40,7 +40,9 @@ public class MaximumSwapSolution {
     public int maximumSwap1(int num) {
         char[] digits = Integer.toString(num).toCharArray();
 
-        if (digits.length == 1) return num;
+        if (digits.length == 1){
+            return num;
+        }
 
         // 寻找不符合非递增顺序的分界线
         int split = 0;
