@@ -32,6 +32,7 @@ public class CycleCheckListSolution {
             if (slow == fast) {
                 return true;
             }
+
             slow = slow.next;
             fast = fast.next.next;
         }
