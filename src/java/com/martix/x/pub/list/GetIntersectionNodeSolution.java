@@ -32,31 +32,28 @@ public class GetIntersectionNodeSolution {
 
     /**
      * 双指针的思路
-     * 设「第一个公共节点」为 node，「链表 headA」的节点数量为
-     * a ，「链表 headB」的节点数量为b，「两链表的公共尾部」的节点数量为
-     * c；
-     *
-     * 头节点 headA 到 node 前，共有
-     * a−c 个节点
-     *
-     * 头节点 headB 到 node 前，共有
-     * b−c 个节点；
-     *
+     * 设「第一个公共节点」为 node，「链表 headA」的节点数量为a ，
+     * 「链表 headB」的节点数量为b，「两链表的公共尾部」的节点数量为c；
+     * <p>
+     * 头节点 headA 到 node 前，共有a−c 个节点
+     * 头节点 headB 到 node 前，共有b−c 个节点；
+     * <p>
      * 指针 A 先遍历完链表 headA ，再开始遍历链表 headB ，当走到 node 时，共走步数为a+(b−c)
      * 指针 B 先遍历完链表 headB ，再开始遍历链表 headA ，当走到 node 时，共走步数为b+(a−c)
-     *
+     * <p>
      * 如下式所示，此时指针 A , B 重合，并有两种情况：
      * a+(b−c)=b+(a−c)
      * 若两链表 有 公共尾部 (即c>0 ) ：指针 A , B 同时指向「第一个公共节点」node
      * 若两链表 无 公共尾部 (即c=0 ) ：指针 A , B 同时指向null
-
+     * <p>
      * 时间复杂度 :(m+n)。
      * 空间复杂度 : O(m)或者O(n)。
+     *
      * @param headA
      * @param headB
      * @return
      */
-    public ListNode getIntersectionNode_1(ListNode headA, ListNode headB){
+    public ListNode getIntersectionNode_1(ListNode headA, ListNode headB) {
         ListNode A = headA, B = headB;
         while (A != B) {
             A = A != null ? A.next : headB;

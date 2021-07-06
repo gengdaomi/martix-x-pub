@@ -14,6 +14,22 @@ package com.martix.x.pub.list;
  */
 public class RemovedDuplicates2Solution {
 
+    /**
+     * 由于给定的链表是排好序的，因此重复的元素在链表中出现的位置是连续的，因此我们只需要对链表进行一次遍历，就可以删除重复的元素。
+     * 由于链表的头节点可能会被删除，因此我们需要额外使用一个哑节点（dummy node）指向链表的头节点;
+     * <p>
+     * 从指针cur 指向链表的哑节点,随后开始对链表进行遍历;
+     * 如果当前cur.next 与cur.next.next 对应的元素相同，
+     * 那么我们就需要将cur.next 以及所有后面拥有相同元素值的链表节点全部删除。
+     * 记下这个元素值x，随后不断将cur.next 从链表中移除，直到cur.next 为空节点或者其元素值不等于x 为止;
+     * 此时，我们将链表中所有元素值为x 的节点全部删除。
+     * <p>
+     * 如果当前cur.next 与cur.next.next 对应的元素不相同，
+     * 那么说明链表中只有一个元素值为cur.next 的节点，那么我们就可以将cur 指向cur.next。
+     *
+     * @param head
+     * @return
+     */
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null) {
             return head;
@@ -25,6 +41,7 @@ public class RemovedDuplicates2Solution {
         while (cur.next != null && cur.next.next != null) {
             if (cur.next.val == cur.next.next.val) {
                 int x = cur.next.val;
+
                 while (cur.next != null && cur.next.val == x) {
                     cur.next = cur.next.next;
                 }

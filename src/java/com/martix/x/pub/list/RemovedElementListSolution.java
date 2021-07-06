@@ -2,7 +2,8 @@ package com.martix.x.pub.list;
 
 /**
  * Created by Andrew-Geng on 12:59 上午 2021/5/8
- * 移除链表元素 lc 203
+ * 移除链表元素
+ * lc 203
  * <p>
  * 给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
  * 输入：head = [1,2,6,3,4,5,6], val = 6
