@@ -11,7 +11,7 @@ import java.util.Map;
  * <p>
  * 两数之和
  * <p>
- * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。
+ * 给定一个整数数组 nums和一个整数目标值 target，请你在该数组中找出 和为目标值 的那两个整数，并返回它们的数组下标。
  * <p>
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
  * <p>
@@ -27,7 +27,34 @@ import java.util.Map;
 public class TwoSumSolution {
 
     /**
-     * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。
+     * 借助hashmap
+     * <p>
+     * 时间复杂度O(N),空间复杂度O(1)
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] solution(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], i);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            int x = target - nums[i];
+
+            if (map.containsKey(x) && map.get(x) != i) {
+                return new int[]{i, map.get(x)};
+            }
+        }
+
+        return new int[]{-1, -1};
+    }
+
+    /**
+     * 给定一个整数数组 nums一个整数目标值 target，请你在该数组中找出 和为目标值 的那两个整数，并返回它们的数组下标。
      * <p>
      * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
      * <p>
@@ -54,35 +81,8 @@ public class TwoSumSolution {
         return new int[]{-1, -1};
     }
 
-    /**
-     * 借助hashmap
-     * <p>
-     * 时间复杂度O(N),空间复杂度O(1)
-     *
-     * @param nums
-     * @param target
-     * @return
-     */
-    public int[] solution_2(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], i);
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            int x = target - nums[i];
-
-            if (map.containsKey(x) && map.get(x) != i) {
-                return new int[]{i, map.get(x)};
-            }
-        }
-
-        return new int[]{-1, -1};
-    }
-
     public static void main(String[] args) {
         int[] params = new int[]{3, 1, 3, 6};
-        System.out.println(Arrays.toString(new TwoSumSolution().solution_2(params, 6)));
+        System.out.println(Arrays.toString(new TwoSumSolution().solution(params, 6)));
     }
 }

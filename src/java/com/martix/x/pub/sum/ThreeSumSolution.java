@@ -35,7 +35,7 @@ public class ThreeSumSolution {
         Arrays.sort(nums);//排序
 
         List<List<Integer>> res = new ArrayList<>();
-        for (int i = 0; i < nums.length - 2; ++i) {
+        for (int i = 0; i < nums.length - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue; //避免重复三元组
             }

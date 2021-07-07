@@ -29,12 +29,12 @@ package com.martix.x.pub.string;
  * <p>
  * Created By Andrew-Geng on 2020/5/13 2:22 下午
  */
-public class StringSortSolution {
+public class CheckInclusionSolution {
 
     public static void main(String[] args) {
-        StringSortSolution stringSortSolution = new StringSortSolution();
+        CheckInclusionSolution checkInclusionSolution = new CheckInclusionSolution();
 
-        Boolean flag = stringSortSolution.checkInclusion("ab", "eidbaooo");
+        Boolean flag = checkInclusionSolution.checkInclusion("ab", "eidbaooo");
         System.out.println(flag);
     }
 
