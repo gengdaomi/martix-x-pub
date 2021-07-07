@@ -9,12 +9,13 @@ public class FindFirstSolution {
 
     public String execute(String str) {
         int[] count = new int[26];
+        char[] strArr = str.toCharArray();
 
-        for (char c : str.toCharArray()) {
+        for (char c : strArr) {
             count[c - 'a']++;
         }
 
-        for (char c : str.toCharArray()) {
+        for (char c : strArr) {
             if (count[c - 'a'] == 1) {
                 return String.valueOf(c);
             }

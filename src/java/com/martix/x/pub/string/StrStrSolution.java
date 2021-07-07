@@ -58,7 +58,7 @@ public class StrStrSolution {
      * @param needle
      * @return
      */
-    public int strStr(String haystack, String needle) {
+    public int strStr_1(String haystack, String needle) {
         if (needle == null || needle.length() == 0) {
             return 0;
         }
@@ -80,4 +80,49 @@ public class StrStrSolution {
 
         return -1;
     }
+
+    /**
+     * 时间复杂度O(n+m); 其中 n 是字符串haystack 的长度，m 是字符串needle 的长度。至多遍历两个字符串一次；
+     * 空间复杂度O(m); 其中m是字符串needle 的长度。
+     *
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr(String haystack, String needle) {
+        int n = haystack.length(), m = needle.length();
+        if (m == 0) {
+            return 0;
+        }
+
+        int[] pi = new int[m];
+        for (int i = 1, j = 0; i < m; i++) {
+            while (j > 0 && needle.charAt(i) != needle.charAt(j)) {
+                j = pi[j - 1];
+            }
+
+            if (needle.charAt(i) == needle.charAt(j)) {
+                j++;
+            }
+
+            pi[i] = j;
+        }
+
+        for (int i = 0, j = 0; i < n; i++) {
+            while (j > 0 && haystack.charAt(i) != needle.charAt(j)) {
+                j = pi[j - 1];
+            }
+
+            if (haystack.charAt(i) == needle.charAt(j)) {
+                j++;
+            }
+
+            if (j == m) {
+                return i - m + 1;
+            }
+        }
+
+        return -1;
+    }
+
 }
