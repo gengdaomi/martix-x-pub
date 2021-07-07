@@ -83,15 +83,12 @@ public class SortColorSolution {
 
         for (int i = 0; i <= p2; i++) {
             while (i <= p2 && nums[i] == 2) {
-                int temp = nums[i];
-                nums[i] = nums[p2];
-                nums[p2] = temp;
+                this.swap(nums, i, p2);
                 p2--;
             }
+
             if (nums[i] == 0) {
-                int temp = nums[i];
-                nums[i] = nums[p0];
-                nums[p0] = temp;
+                this.swap(nums, i, p0);
                 p0++;
             }
         }
