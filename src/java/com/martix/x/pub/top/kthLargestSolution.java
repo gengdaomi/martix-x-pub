@@ -76,39 +76,39 @@ public class kthLargestSolution {
             return 0;
         }
 
-        int i = left;
-        int j = right;
+        int low = left;
+        int high = right;
 
-        int p = nums[i];
+        int p = nums[low];
 
-        while (i < j) {
-            while (i < j && p <= nums[j]) {
-                j--;
+        while (low < high) {
+            while (low < high && p <= nums[high]) {
+                high--;
             }
 
-            if (p > nums[j]) {
-                nums[i++] = nums[j];
+            if (p > nums[high]) {
+                nums[low++] = nums[high];
             }
 
-            while (i < j && p >= nums[i]) {
-                i++;
+            while (low < high && p >= nums[low]) {
+                low++;
             }
 
-            if (p < nums[i]) {
-                nums[j--] = nums[i];
+            if (p < nums[low]) {
+                nums[high--] = nums[low];
             }
         }
 
-        nums[i] = p;
+        nums[low] = p;
 
-        if (left < i && k < i) {
-            return sort(nums, k, left, i - 1);
+        if (left < low && k < low) {
+            return sort(nums, k, left, low - 1);
         }
-        if (right > j && k > j) {
-            return sort(nums, k, j + 1, right);
+        if (right > high && k > high) {
+            return sort(nums, k, high + 1, right);
         }
 
-        return nums[i];
+        return nums[low];
     }
 
     /**

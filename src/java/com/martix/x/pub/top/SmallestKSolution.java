@@ -6,7 +6,8 @@ import java.util.PriorityQueue;
 
 /**
  * Created by Andrew-Geng on 1:08 上午 2021/5/29
- * 最小K个数 https://leetcode-cn.com/problems/smallest-k-lcci/
+ * 最小K个数
+ * https://leetcode-cn.com/problems/smallest-k-lcci/
  * <p>
  * 设计一个算法，找出数组中最小的k个数。以任意顺序返回这k个数均可。
  * <p>
