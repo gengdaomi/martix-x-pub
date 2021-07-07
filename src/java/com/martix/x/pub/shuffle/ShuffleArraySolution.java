@@ -43,7 +43,6 @@ public class ShuffleArraySolution {
     public ShuffleArraySolution(int[] nums) {
 
         n = nums.length;
-
         originalArray = nums;
     }
 
@@ -51,7 +50,6 @@ public class ShuffleArraySolution {
      * Resets the array to its original configuration and return it.
      */
     public int[] reset() {
-
         return originalArray;
     }
 
@@ -68,11 +66,9 @@ public class ShuffleArraySolution {
         for (int i = 0; i < n; i++) {
 
             int r = i + mRandom.nextInt(n-i);
-
             int temp = randomArray[r];
 
             randomArray[r] = randomArray[i];
-
             randomArray[i] = temp;
         }
 

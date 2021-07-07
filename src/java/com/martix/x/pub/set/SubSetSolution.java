@@ -31,16 +31,15 @@ public class SubSetSolution {
         System.out.println(new SubSetSolution().subSet(nums));
     }
 
+    private List<List<Integer>> result = new ArrayList<>();
+
     public List<List<Integer>> subSet(int[] nums) {
         robot(0, nums);
-        return ans;
+        return result;
     }
 
-    private List<List<Integer>> ans = new ArrayList<>();
-
     // 记录是否选择该元素
-    private boolean[] v = new boolean[100];
-
+    private boolean[] visited = new boolean[100];
 
     // 此处的index代表的是数组的索引
     private void robot(int index, int[] nums) {
@@ -48,18 +47,20 @@ public class SubSetSolution {
 
             List<Integer> temp = new ArrayList<>();
             for (int i = 0; i < nums.length; i++) {
-                if (v[i]) {
+
+                if (visited[i]) {
                     temp.add(nums[i]);
                 }
             }
-            ans.add(temp);
+
+            result.add(temp);
             return;
         }
 
         // 以下两种情况中 true代表选择该元素   false代表不选择该元素
-        v[index] = true;
+        visited[index] = true;
         robot(index + 1, nums);
-        v[index] = false;
+        visited[index] = false;
         robot(index + 1, nums);
     }
 }
