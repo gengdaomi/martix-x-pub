@@ -10,7 +10,8 @@ import java.util.List;
  * <p>
  * lc 16
  * <p>
- * 给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+ * 给定一个包括n个整数的数组nums和 一个目标值target。找出nums中的三个整数，使得它们的和与target最接近。
+ * 返回这三个数的和。假定每组输入只存在唯一答案。
  * <p>
  * 输入：nums = [-1,2,1,-4], target = 1
  * 输出：2
@@ -38,7 +39,7 @@ public class ThreeSumClosestSolution {
         int result = 0;
         int abs = Integer.MAX_VALUE;
         for (int i = 0; i < nums.length; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) {
+            if (i > 0 && nums[i] == nums[i - 1]) { //如果相邻数字出现重复的，跳过
                 continue;
             }
 
