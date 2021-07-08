@@ -1,4 +1,4 @@
-package com.martix.x.pub.validate;
+package com.martix.x.pub.combine;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
