@@ -5,7 +5,7 @@ package com.martix.x.pub.dymaic;
  * <p>
  * 买卖股票的最佳时机 IV lc 188
  * <p>
- * 给定一个整数数组 prices ，它的第 i 个元素 prices[i] 是一支给定的股票在第 i 天的价格。
+ * 给定一个整数数组prices ，它的第 i 个元素prices[i] 是一支给定的股票在第 i 天的价格。
  * <p>
  * 设计一个算法来计算你所能获取的最大利润。你最多可以完成 k 笔交易。
  * <p>
