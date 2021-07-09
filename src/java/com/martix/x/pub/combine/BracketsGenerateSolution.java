@@ -1,4 +1,4 @@
-package com.martix.x.pub.validate;
+package com.martix.x.pub.combine;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -109,9 +109,11 @@ public class BracketsGenerateSolution {
      */
     public List<String> generateParenthesis_1(int n) {
         List<String> result = new ArrayList<>();
+
         if (n == 0) {
             return result;
         }
+
         Queue<Node> queue = new LinkedList<>();
         queue.offer(new Node("", n, n));
 
@@ -119,13 +121,15 @@ public class BracketsGenerateSolution {
 
             Node curNode = queue.poll();
             if (curNode.left == 0 && curNode.right == 0) {
-                result.add(curNode.res);
+                result.add(curNode.result);
             }
+
             if (curNode.left > 0) {
-                queue.offer(new Node(curNode.res + "(", curNode.left - 1, curNode.right));
+                queue.offer(new Node(curNode.result + "(", curNode.left - 1, curNode.right));
             }
+
             if (curNode.right > 0 && curNode.left < curNode.right) {
-                queue.offer(new Node(curNode.res + ")", curNode.left, curNode.right - 1));
+                queue.offer(new Node(curNode.result + ")", curNode.left, curNode.right - 1));
             }
         }
 
@@ -136,7 +140,7 @@ public class BracketsGenerateSolution {
         /**
          * 当前得到的字符串
          */
-        private String res;
+        private String result;
         /**
          * 剩余左括号数量
          */
@@ -146,8 +150,8 @@ public class BracketsGenerateSolution {
          */
         private int right;
 
-        public Node(String str, int left, int right) {
-            this.res = str;
+        public Node(String result, int left, int right) {
+            this.result = result;
             this.left = left;
             this.right = right;
         }

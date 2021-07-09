@@ -7,7 +7,7 @@ package com.martix.x.pub.validate;
  * <p>
  * 如果对于所有 i <= j，A[i] <= A[j]，那么数组 A 是单调递增的。 如果对于所有 i <= j，A[i]> = A[j]，那么数组 A 是单调递减的。
  * <p>
- * 当给定的数组 A 是单调数组时返回 true，否则返回 false。
+ * 当给定的数组 A是单调数组时返回 true，否则返回 false。
  * <p>
  * lc 896
  * <p>
@@ -78,19 +78,19 @@ public class MonotonicValidateSolution {
      */
     public boolean isMonotonic_1(int[] A) {
         //初始化是否单调递增 是否单调递减
-        boolean isIncrease = true, isDecrease = true;
+        boolean isIncreased = true, isDecreased = true;
 
         for (int i = 1; i < A.length; i++) {
             if (A[i - 1] < A[i]) { //表示当前出现的情况 存在单调递增的，所以判断单调递减为false
-                isDecrease = false;
+                isDecreased = false;
             }
 
             if (A[i - 1] > A[i]) { //表示当前出现的情况 存在单调递减的，所以判断单调递增为false
-                isIncrease = false;
+                isIncreased = false;
             }
         }
 
-        return isIncrease || isDecrease;
+        return isIncreased || isDecreased;
     }
 
     public static void main(String[] args) {
