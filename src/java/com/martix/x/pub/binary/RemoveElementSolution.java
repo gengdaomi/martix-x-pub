@@ -48,13 +48,14 @@ public class RemoveElementSolution {
 
     /**
      * 时间复杂度O(n) 空间复杂度O(1)
+     *
      * @param nums
      * @param val
      * @return
      */
     public int removeElement(int[] nums, int val) {
         int left = 0;
-        int right = nums.length-1;
+        int right = nums.length - 1;
 
         while (left <= right) {
             if (nums[left] == val) {
@@ -69,8 +70,9 @@ public class RemoveElementSolution {
 
     /**
      * 双指针的方式
-     *
+     * <p>
      * 时间复杂度O(n) 空间复杂度O(1)
+     *
      * @param nums
      * @param val
      * @return
@@ -90,7 +92,7 @@ public class RemoveElementSolution {
                 while (left <= right && nums[right] == val) {
                     right--;
                 }
-                if(left>right){
+                if (left > right) {
                     break;
                 }
 
