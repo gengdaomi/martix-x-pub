@@ -12,7 +12,7 @@ public class FindNumSubSequenceSolution {
 
         int count = 0;
         for (int i = 0; i < words.length; i++) {
-            if (new FindSubSequenceSolution().isSubsequence(words[i], s)) {
+            if (new CheckSubSequenceSolution().isSubsequence(words[i], s)) {
                 count++;
             }
         }
