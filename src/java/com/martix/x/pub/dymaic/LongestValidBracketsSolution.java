@@ -28,7 +28,7 @@ import java.util.LinkedList;
  * 输入：s = ""
  * 输出：0
  */
-public class LongestValidParenthesesSolution {
+public class LongestValidBracketsSolution {
 
     /**
      * 动态规划
