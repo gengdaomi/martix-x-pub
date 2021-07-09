@@ -24,18 +24,18 @@ package com.martix.x.pub.arrays;
  * <p>
  * Created By Andrew-Geng on 2020/5/13 2:06 下午
  */
-public class LongestCommonSolution {
+public class LongestCommonPrefixSolution {
 
     public static void main(String[] args) {
-        LongestCommonSolution longestCommonSolution = new LongestCommonSolution();
+        LongestCommonPrefixSolution longestCommonPrefixSolution = new LongestCommonPrefixSolution();
 
         String[] strings = new String[]{"flower", "flow", "flight"};
-        String str = longestCommonSolution.longestCommonPrefix(strings);
+        String str = longestCommonPrefixSolution.longestCommon(strings);
 
         System.out.println(str);
     }
 
-    public String longestCommonPrefix(String[] strs) {
+    public String longestCommon(String[] strs) {
         int count = strs.length;
         String prefix = "";
 
@@ -66,7 +66,7 @@ public class LongestCommonSolution {
      * @param strs
      * @return
      */
-    public String longestCommonPrefix1(String[] strs) {
+    public String longestCommon1(String[] strs) {
         if (strs.length == 0)
             return "";
         if (strs == null) {
