@@ -40,7 +40,7 @@ public class RemovedKthMaxSolution {
         for (int i = 0; i < num.length(); i++) {
             char c = num.charAt(i);
 
-            while (index > 0 && c > stack[index - 1] && k > 0) { //当栈顶数字大于遍历到的当前数字时，栈顶数字出栈（相当于删除数字）
+            while (index > 0 && c > stack[index - 1] && k > 0) { //当栈顶数字小于遍历到的当前数字时，栈顶数字出栈（相当于删除数字）
                 index--;
                 k--;
             }
