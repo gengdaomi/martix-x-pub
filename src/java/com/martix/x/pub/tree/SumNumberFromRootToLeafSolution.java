@@ -33,7 +33,7 @@ import java.util.Queue;
  * <p>
  * 链接：https://leetcode-cn.com/problems/sum-root-to-leaf-numbers
  */
-public class SumTreeNumberSolution {
+public class SumNumberFromRootToLeafSolution {
 
     /**
      * 深度遍历
