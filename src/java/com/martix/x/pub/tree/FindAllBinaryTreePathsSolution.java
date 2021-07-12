@@ -27,7 +27,7 @@ import java.util.Queue;
  * <p>
  * 解释: 所有根节点到叶子节点的路径为: 1->2->5, 1->3
  */
-public class FindBinaryTreePathsSolution {
+public class FindAllBinaryTreePathsSolution {
 
     private List<String> result = new ArrayList<>();
 
