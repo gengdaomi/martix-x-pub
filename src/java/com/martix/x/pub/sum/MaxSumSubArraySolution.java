@@ -3,7 +3,7 @@ package com.martix.x.pub.sum;
 /**
  * Created by ayue on 下午5:14 2018/6/27
  */
-public class MaxSumSolution {
+public class MaxSumSubArraySolution {
 
     /**
      * <pre>
@@ -89,6 +89,6 @@ public class MaxSumSolution {
 
     public static void main(String[] args) {
         int[] params = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println(new MaxSumSolution().maxSubArray(params));
+        System.out.println(new MaxSumSubArraySolution().maxSubArray(params));
     }
 }
