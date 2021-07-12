@@ -24,13 +24,13 @@ package com.martix.x.pub.string;
  * <p>
  * Created By Andrew-Geng on 2020/5/13 2:06 下午
  */
-public class LongestCommonSolution {
+public class LongestCommonPrefixSolution {
 
     public static void main(String[] args) {
-        LongestCommonSolution longestCommonSolution = new LongestCommonSolution();
+        LongestCommonPrefixSolution longestCommonPrefixSolution = new LongestCommonPrefixSolution();
 
         String[] strings = new String[]{"flower", "flow", "flight"};
-        String str = longestCommonSolution.longestCommonPrefix(strings);
+        String str = longestCommonPrefixSolution.longestCommonPrefix(strings);
 
         System.out.println(str);
     }
@@ -43,7 +43,7 @@ public class LongestCommonSolution {
             prefix = strs[0];
         }
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 1; i < count; i++) {
             //关键代码，不断的从后往前截取字符串，然后与之相比，直到startsWith()返回true
             while (!strs[i].startsWith(prefix)) {
                 prefix = prefix.substring(0, prefix.length() - 1);
