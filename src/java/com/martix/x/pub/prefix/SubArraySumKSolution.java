@@ -20,11 +20,11 @@ import java.util.Map;
  * 数组的长度为 [1, 20,000]。
  * 数组中元素的范围是 [-1000, 1000] ，且整数k的范围是[-1e7, 1e7]。
  */
-public class SubArraySumSolution {
+public class SubArraySumKSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 1, 1, 2};
-        System.out.println(new SubArraySumSolution().subarraySum_2(nums, 2));
+        System.out.println(new SubArraySumKSolution().subarraySum_2(nums, 2));
     }
 
     /**
