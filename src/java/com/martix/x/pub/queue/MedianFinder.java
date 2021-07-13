@@ -53,10 +53,11 @@ public class MedianFinder {
     public void addNum(int num) {
         count += 1;
         maxheap.offer(num);
-        minheap.add(maxheap.poll());
+        minheap.offer(maxheap.poll());
+
         // 如果两个堆合起来的元素个数是奇数，小顶堆要拿出堆顶元素给大顶堆
         if ((count & 1) != 0) {
-            maxheap.add(minheap.poll());
+            maxheap.offer(minheap.poll());
         }
     }
 

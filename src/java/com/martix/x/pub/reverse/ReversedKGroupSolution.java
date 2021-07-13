@@ -60,7 +60,7 @@ public class ReversedKGroupSolution {
      */
     private ListNode reverse(ListNode a, ListNode b) {
         ListNode pre = null, cur = a;
-        
+
         while (cur != b) {
             ListNode next = cur.next;
             cur.next = pre;
