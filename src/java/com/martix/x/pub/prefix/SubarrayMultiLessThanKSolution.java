@@ -6,7 +6,7 @@ package com.martix.x.pub.prefix;
  * <p>
  * 给定一个正整数数组nums。
  * <p>
- * 找出该数组内乘积小于k的连续的子数组的个数。
+ * 找出该数组内乘积小于k的 连续的 子数组的个数。
  * <p>
  * 示例 1:
  * <p>
@@ -20,11 +20,11 @@ package com.martix.x.pub.prefix;
  * 0 < nums[i] < 1000
  * 0 <= k < 10^6
  */
-public class NumSubarrayProductSolution {
+public class SubarrayMultiLessThanKSolution {
 
     public static void main(String[] args) {
         int[] num = new int[]{10, 9, 10, 4, 3, 8, 3, 3, 6, 2, 10, 10, 9, 3};
-        int result = new NumSubarrayProductSolution().numSubarrayProductLessThanK(num, 19);
+        int result = new SubarrayMultiLessThanKSolution().numSubarrayProductLessThanK(num, 19);
         System.out.println(result);
     }
 

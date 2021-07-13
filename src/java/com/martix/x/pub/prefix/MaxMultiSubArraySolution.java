@@ -1,4 +1,4 @@
-package com.martix.x.pub.dymaic;
+package com.martix.x.pub.prefix;
 
 /**
  * Created by Andrew-Geng on 10:58 下午 2021/5/19
@@ -18,11 +18,11 @@ package com.martix.x.pub.dymaic;
  * 输出: 0
  * 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
  */
-public class MaxProductSolution {
+public class MaxMultiSubArraySolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{-1, 0, -1, 2, 3, -5, -2};
-        System.out.println(new MaxProductSolution().maxProduct(nums));
+        System.out.println(new MaxMultiSubArraySolution().maxProduct(nums));
     }
 
     /**
