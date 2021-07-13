@@ -35,7 +35,7 @@ public class ReverseStringSolution {
 
     public static void main(String[] args) {
         ReverseStringSolution reverseStringSolution = new ReverseStringSolution();
-        String result = reverseStringSolution.reverseWords("the     sky is blue");
+        String result = reverseStringSolution.reverseWords("the sky is blue");
 
         System.out.println(result);
     }

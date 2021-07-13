@@ -14,7 +14,7 @@ public class ReversedIntegerSolution {
 
     public static void main(String[] args) {
         //-2147483648
-        System.out.println(new ReversedIntegerSolution().reverse(-2333));
+        System.out.println(new ReversedIntegerSolution().reverse(-2147483648));
     }
 
     public int reverse(int x) {
