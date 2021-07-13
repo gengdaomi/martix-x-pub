@@ -24,14 +24,14 @@ public class MainStackSolution {
     public void push(int x) {
         dataStack.push(x);
 
-        if (minStack.isEmpty() || x<=minStack.peek()) {
+        if (minStack.isEmpty() || x <= minStack.peek()) {
             minStack.push(x);
         }
 
     }
 
     public void pop() {
-        if(dataStack.peek().equals(minStack.peek())){
+        if (dataStack.peek().equals(minStack.peek())) {
             minStack.pop();
         }
 

@@ -8,6 +8,10 @@ package com.martix.x.pub.sort;
  */
 public class MergeSortSolution {
 
+    public static void main(String[] args) {
+        new MergeSortSolution().sort(null, 1, 4);
+    }
+
     /**
      * 思路：
      * 1.申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；
@@ -68,7 +72,4 @@ public class MergeSortSolution {
         return a;
     }
 
-    public static void main(String[] args) {
-        new MergeSortSolution().sort(null, 1, 4);
-    }
 }

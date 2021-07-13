@@ -56,7 +56,7 @@ public class NextGreaterElement2Solution {
     }
 
     /**
-     * 从后往前 获取到数组中第一个逆序的位置
+     * 从后往前 获取到数组中第一个逆序(即从后往前遍历，不是正序的)的位置
      *
      * @param nums
      * @return
@@ -68,6 +68,25 @@ public class NextGreaterElement2Solution {
             }
         }
         return 0;
+    }
+
+    /**
+     * 将从尾部到index子数组中仅仅大于index-1位置的值，与其交换
+     *
+     * @param nums
+     * @param index
+     */
+    private void exchange(char[] nums, int index) {
+        char head = nums[index - 1];
+
+        for (int i = nums.length - 1; i >= index; i--) {
+            if (head < nums[i]) {
+                nums[index - 1] = nums[i];
+                nums[i] = head;
+
+                break;
+            }
+        }
     }
 
     /**
@@ -89,26 +108,6 @@ public class NextGreaterElement2Solution {
         }
 
         return nums;
-    }
-
-    /**
-     * 将从尾部到index子数组中仅仅大于index-1位置的值，与其交换
-     *
-     * @param nums
-     * @param index
-     */
-    private void exchange(char[] nums, int index) {
-
-        char head = nums[index - 1];
-
-        for (int i = nums.length - 1; i >= index; i--) {
-            if (head < nums[i]) {
-                nums[index - 1] = nums[i];
-                nums[i] = head;
-
-                break;
-            }
-        }
     }
 
 }

@@ -29,6 +29,18 @@ public class NextGreaterElementsCycleSolution {
 
     }
 
+    /**
+     * 单调栈 + 循环数组
+     * 单调栈中保存的是下标，从栈底到栈顶的下标在数组nums 中对应的值是单调不升的。
+     *
+     * 我们可以把这个循环数组「拉直」，即复制该序列的前n−1 个元素拼接在原序列的后面。
+     * 这样我们就可以将这个新序列当作普通序列，用上文的方法来处理。
+     * 在本题中，我们不需要显性地将该循环数组「拉直」，而只需要在处理时对下标取模即可;
+     *
+     * 时间空间复杂度O(n); n是序列的长度
+     * @param nums
+     * @return
+     */
     public int[] nextGreaterElements(int[] nums) {
         int[] result = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
