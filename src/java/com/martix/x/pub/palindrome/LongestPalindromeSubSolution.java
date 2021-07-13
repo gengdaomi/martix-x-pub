@@ -33,6 +33,13 @@ public class LongestPalindromeSubSolution {
         System.out.println(new LongestPalindromeSubSolution().longestPalindrome(s));
     }
 
+    /**
+     * 中心扩展算法
+     *
+     * 时间复杂度O(n^2),空间复杂度O(1)
+     * @param s
+     * @return
+     */
     public String longestPalindrome(String s) {
         int len = s.length();
 

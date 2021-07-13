@@ -46,13 +46,13 @@ public class CountPalindromeSolution {
     public int countSubstrings(String s) {
         int n = s.length(), result = 0;
 
-        for (int i = 0; i < 2 * n - 1; ++i) {
+        for (int i = 0; i < 2 * n - 1; i++) {
             //先是left，有一个很明显的2倍关系的存在，其次是right，可能和left指向同一个（偶数时），也可能往后移动一个（奇数）
             int left = i / 2, right = left + i % 2;
 
             while (left >= 0 && right < n && s.charAt(left) == s.charAt(right)) {
-                --left;
-                ++right;
+                left--;
+                right++;
 
                 result++;
             }
