@@ -73,6 +73,26 @@ public class NextGreaterElement2Solution {
     }
 
     /**
+     * 将从尾部到index子数组中仅仅大于index-1位置的值，与其交换
+     *
+     * @param nums
+     * @param index
+     */
+    private void exchange(char[] nums, int index) {
+
+        char head = nums[index - 1];
+
+        for (int i = nums.length - 1; i >= index; i--) {
+            if (head < nums[i]) {
+                nums[index - 1] = nums[i];
+                nums[i] = head;
+
+                break;
+            }
+        }
+    }
+
+    /**
      * 表示从index位置开始进行数组倒序
      * @param nums
      * @param index
@@ -91,26 +111,6 @@ public class NextGreaterElement2Solution {
         }
 
         return nums;
-    }
-
-    /**
-     * 将从尾部到index子数组中仅仅大于index-1位置的值，与其交换
-     *
-     * @param nums
-     * @param index
-     */
-    private void exchange(char[] nums, int index) {
-
-        char head = nums[index - 1];
-
-        for (int i = nums.length - 1; i >= index; i--) {
-            if (head < nums[i]) {
-                nums[index - 1] = nums[i];
-                nums[i] = head;
-
-                break;
-            }
-        }
     }
 
 }

@@ -1,6 +1,7 @@
 package com.martix.x.pub.permutation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -37,13 +38,56 @@ public class kthLargestPermutationSolution {
     }
 
     /**
+     * 数学 + 缩小问题规模
+     *
      * 时间复杂度O(n^2)  空间复杂度O(n)
      * @param n
      * @param k
      * @return
      */
-    public String getPermutation_0(int n,int k){
-        if (n <= 1){
+    public String getPermutation_1(int n, int k) {
+        int[] factorial = new int[n];
+        factorial[0] = 1;
+
+        for (int i = 1; i < n; ++i) {
+            factorial[i] = factorial[i - 1] * i;
+        }
+
+        --k;
+        StringBuffer ans = new StringBuffer();
+        int[] valid = new int[n + 1];
+        Arrays.fill(valid, 1);
+
+        for (int i = 1; i <= n; ++i) {
+            int order = k / factorial[n - i] + 1;
+
+            for (int j = 1; j <= n; ++j) {
+                order -= valid[j];
+
+                if (order == 0) {
+                    ans.append(j);
+                    valid[j] = 0;
+                    break;
+                }
+
+            }
+
+            k %= factorial[n - i];
+        }
+
+        return ans.toString();
+    }
+
+
+    /**
+     * 时间复杂度O(n^2)  空间复杂度O(n)
+     *
+     * @param n
+     * @param k
+     * @return
+     */
+    public String getPermutation_0(int n, int k) {
+        if (n <= 1) {
             return "" + n;
         }
 
