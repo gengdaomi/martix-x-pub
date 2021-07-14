@@ -30,7 +30,7 @@ import java.util.Set;
  * 输入: s = ""
  * 输出: 0
  */
-public class LongestSubStringSolution {
+public class LongestSubStringNoRepeatSolution {
 
     /**
      * 采取滑动窗口的方法降低时间复杂度
@@ -103,6 +103,6 @@ public class LongestSubStringSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LongestSubStringSolution().lengthOfLongestSubstring_1("abcabcbb"));
+        System.out.println(new LongestSubStringNoRepeatSolution().lengthOfLongestSubstring_1("abcabcbb"));
     }
 }
