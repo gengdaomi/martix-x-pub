@@ -16,7 +16,7 @@ package com.martix.x.pub.tree;
  * 输出：true
  * 解释：树中蓝色的节点构成了与链表对应的子路径。
  */
-public class IsSubPathSolution {
+public class IsSubPathExistListSolution {
 
     /**
      * 深度优先搜索，逐个检查每一条纵深路径上的节点是否匹配，在检查过程中如果匹配到了就返回 true，其他情况：

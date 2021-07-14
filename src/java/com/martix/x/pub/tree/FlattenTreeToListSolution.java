@@ -18,7 +18,7 @@ import java.util.List;
  * 输入：root = [1,2,5,3,4,null,6]
  * 输出：[1,null,2,null,3,null,4,null,5,null,6]
  */
-public class FlattenTreeSolution {
+public class FlattenTreeToListSolution {
 
     /**
      * 前序遍历

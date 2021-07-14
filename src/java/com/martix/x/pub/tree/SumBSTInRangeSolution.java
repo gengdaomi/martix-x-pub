@@ -15,7 +15,7 @@ import java.util.Queue;
  * 输入：root = [10,5,15,3,7,13,18,1,null,6], low = 6, high = 10
  * 输出：23
  */
-public class RangeSumBSTSolution {
+public class SumBSTInRangeSolution {
 
     /**
      * 深度递归遍历 DFS
@@ -35,7 +35,6 @@ public class RangeSumBSTSolution {
         if (root.val > high) {
             return rangeSumBST(root.left, low, high);
         }
-
 
         int left = rangeSumBST(root.left, low, high);
         int right = rangeSumBST(root.right, low, high);

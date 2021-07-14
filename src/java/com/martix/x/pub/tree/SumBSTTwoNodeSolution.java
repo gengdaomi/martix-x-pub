@@ -35,7 +35,7 @@ import java.util.Set;
  * <p>
  * 输出: False
  */
-public class TwoSumBSTSolution {
+public class SumBSTTwoNodeSolution {
 
     public List<Integer> result = new ArrayList<>();
 

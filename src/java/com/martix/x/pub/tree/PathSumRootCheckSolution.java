@@ -15,7 +15,7 @@ package com.martix.x.pub.tree;
  * 输入：root = [1,2], targetSum = 0
  * 输出：false
  */
-public class HasPathSumRootSolution {
+public class PathSumRootCheckSolution {
 
     /**
      * 递归的思路
