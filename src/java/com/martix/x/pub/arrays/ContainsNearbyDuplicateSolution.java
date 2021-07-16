@@ -35,6 +35,13 @@ public class ContainsNearbyDuplicateSolution {
     /**
      * hash 表的方式
      *
+     * 用散列表来维护这个k大小的滑动窗口
+     *
+     * 遍历数组，对于每个元素做以下操作：
+     * 1.在散列表中搜索当前元素，如果找到了就返回 true
+     * 2.在散列表中插入当前元素
+     * 3.如果当前散列表的大小超过了k， 删除散列表中最旧的元素
+     *
      * 时间复杂度O(n)
      * 空间复杂度O(min(n,k))
      * @param nums
