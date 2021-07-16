@@ -21,7 +21,7 @@ import java.util.*;
  *   5     4       <---
  *
  */
-public class RightSideViewSolution {
+public class SideViewRightSolution {
 
     /**
      * 广度优先搜索
