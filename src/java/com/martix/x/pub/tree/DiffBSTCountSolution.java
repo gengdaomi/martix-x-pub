@@ -18,10 +18,10 @@ package com.martix.x.pub.tree;
  * /     /       \                 \
  * 2     1         2                 3
  */
-public class CountBSTSolution {
+public class DiffBSTCountSolution {
 
     public static void main(String[] args) {
-        System.out.println(new CountBSTSolution().numTrees(3));
+        System.out.println(new DiffBSTCountSolution().numTrees(3));
     }
 
     /**
