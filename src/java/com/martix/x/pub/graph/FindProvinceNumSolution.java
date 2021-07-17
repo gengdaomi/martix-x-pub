@@ -50,7 +50,7 @@ public class FindProvinceNumSolution {
         return circles;
     }
 
-    public void dfs(int[][] isConnected, boolean[] visited, int provinces, int i) {
+    private void dfs(int[][] isConnected, boolean[] visited, int provinces, int i) {
         for (int j = 0; j < provinces; j++) {
             if (isConnected[i][j] == 1 && !visited[j]) {
                 visited[j] = true;
