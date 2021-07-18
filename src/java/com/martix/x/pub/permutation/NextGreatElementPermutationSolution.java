@@ -28,12 +28,12 @@ package com.martix.x.pub.permutation;
  * 输入：nums = [1]
  * 输出：[1]
  */
-public class NextPermutationSolution {
+public class NextGreatElementPermutationSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 2, 3, 5, 4};
 
-        new NextPermutationSolution().nextPermutation(nums);
+        new NextGreatElementPermutationSolution().nextPermutation(nums);
         System.out.println(nums);
     }
 
