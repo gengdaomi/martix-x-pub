@@ -65,6 +65,11 @@ public class NextLargerNodesSolution {
         System.out.println(result);
     }
 
+    /**
+     * 单调栈
+     * @param head
+     * @return
+     */
     public int[] nextLargerNodes(ListNode head) {
         List<Integer> list = new ArrayList<>();
         Stack<Integer> stack = new Stack();
