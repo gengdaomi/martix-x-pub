@@ -6,7 +6,7 @@ package com.martix.x.pub.window;
  * 至少有 K 个重复字符的最长子串
  * lc 395
  * <p>
- * 给你一个字符串 s 和一个整数 k ，请你找出 s 中的最长子串， 要求该子串中的每一字符出现次数都不少于 k 。返回这一子串的长度。
+ * 给你一个字符串 s 和一个整数 k ，请你找出 s 中的最长子串，要求该子串中的每一字符出现次数都不少于 k 。返回这一子串的长度。
  * <p>
  * 示例 1：
  * <p>
@@ -23,6 +23,9 @@ public class LongestSubstringLessKRepeatSolution {
 
     /**
      * 滑动窗口
+     *
+     * 当某个字符的出现次数从0 增加到1 时，将less 加一；
+     * 当某个字符的出现次数从 k−1 增加到k 时，将less 减一
      * @param s
      * @param k
      * @return
@@ -33,28 +36,29 @@ public class LongestSubstringLessKRepeatSolution {
 
         for (int t = 1; t <= 26; t++) {
             int low = 0, right = 0;
-            int[] cnt = new int[26];
-            int tot = 0;
+            int[] count = new int[26];  //滑动窗口内部每个字符出现的次数count
+            int total = 0;  //滑动窗口内的字符种类数目total
             int less = 0;
 
             while (right < size) {
-                cnt[s.charAt(right) - 'a']++;
-                if (cnt[s.charAt(right) - 'a'] == 1) {
-                    tot++;
+                count[s.charAt(right) - 'a']++;
+                if (count[s.charAt(right) - 'a'] == 1) {
+                    total++;
                     less++;
                 }
 
-                if (cnt[s.charAt(right) - 'a'] == k) {
+                if (count[s.charAt(right) - 'a'] == k) {
                     less--;
                 }
 
-                while (tot > t) {
-                    cnt[s.charAt(low) - 'a']--;
-                    if (cnt[s.charAt(low) - 'a'] == k - 1) {
+                while (total > t) {
+                    count[s.charAt(low) - 'a']--;
+                    if (count[s.charAt(low) - 'a'] == k - 1) {
                         less++;
                     }
-                    if (cnt[s.charAt(low) - 'a'] == 0) {
-                        tot--;
+
+                    if (count[s.charAt(low) - 'a'] == 0) {
+                        total--;
                         less--;
                     }
                     low++;

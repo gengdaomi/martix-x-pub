@@ -37,14 +37,14 @@ import java.util.*;
  * 起始索引等于 1 的子串是 "ba", 它是 "ab" 的字母异位词。
  * 起始索引等于 2 的子串是 "ab", 它是 "ab" 的字母异位词。
  */
-public class FindAnagramSolution {
+public class FindAllAnagramSolution {
 
     public static void main(String[] args) {
 
         String s = "abaacbabc";
         String p = "abc";
 
-        List<Integer> result = new FindAnagramSolution().findAnagrams(s,p);
+        List<Integer> result = new FindAllAnagramSolution().findAnagrams(s,p);
         System.out.println(result.toString());
     }
 
