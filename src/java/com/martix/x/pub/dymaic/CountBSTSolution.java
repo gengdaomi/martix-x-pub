@@ -3,7 +3,7 @@ package com.martix.x.pub.dymaic;
 /**
  * Created by Andrew-Geng on 3:30 下午 2021/4/21
  * 不同的二叉搜索树 lc 96
- * 给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
+ * 给定一个整数 n，求以1 ...n为节点组成的二叉搜索树有多少种？
  * <p>
  * 示例:
  * <p>
