@@ -32,7 +32,7 @@ import java.util.*;
  * [5]
  * ]
  */
-public class CombinationSum2Solution {
+public class CombinationSumRepeatSolution {
 
     /**
      * 核心思路：

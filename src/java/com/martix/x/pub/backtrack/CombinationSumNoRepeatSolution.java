@@ -23,7 +23,7 @@ import java.util.List;
  * 输出: [[1,2,6], [1,3,5], [2,3,4]]
  *
  */
-public class CombinationSum3Solution {
+public class CombinationSumNoRepeatSolution {
 
     List<Integer> temp = new ArrayList<Integer>();
     List<List<Integer>> result = new ArrayList<List<Integer>>();
