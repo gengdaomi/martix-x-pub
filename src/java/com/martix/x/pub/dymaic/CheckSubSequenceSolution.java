@@ -55,7 +55,7 @@ public class CheckSubSequenceSolution {
             }
 
             dp[j] = true;
-            ++j;
+            j++;
         }
 
         for (int i = 0; i < dp.length; i++) {
