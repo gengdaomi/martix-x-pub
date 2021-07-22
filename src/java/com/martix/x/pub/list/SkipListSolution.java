@@ -186,9 +186,9 @@ public class SkipListSolution<T> {
                 return false;
             }
 
-            if (!(o instanceof SkipListNode<?>)) {
-                return false;
-            }
+//            if (!(o instanceof SkipListNode<?>)) {
+//                return false;
+//            }
 
             SkipListNode<T> ent;
             try {
