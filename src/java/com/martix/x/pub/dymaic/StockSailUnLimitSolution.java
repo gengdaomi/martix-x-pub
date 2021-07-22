@@ -32,7 +32,7 @@ package com.martix.x.pub.dymaic;
  * <p>
  * Created By Andrew-Geng on 2020/5/16 12:49 上午
  */
-public class StockSail2Solution {
+public class StockSailUnLimitSolution {
 
     /**
      * 核心思路：即再所有较低的点买入，在所有较高的点卖出

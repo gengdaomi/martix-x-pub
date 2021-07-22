@@ -43,7 +43,7 @@ package com.martix.x.pub.dymaic;
  * 1 <= prices.length <= 105
  * 0 <= prices[i] <= 105
  */
-public class StockSail3Solution {
+public class StockSailTwiceSolution {
 
     private static int MAX_DEAL_TIMES = 2; //最大买卖次数
 

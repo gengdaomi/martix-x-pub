@@ -32,7 +32,7 @@ package com.martix.x.pub.dymaic;
  * 0 <= prices.length <= 1000
  * 0 <= prices[i] <= 1000
  */
-public class StockSail4Solution {
+public class StockSailKTimeSolution {
 
     public int maxProfit(int k, int[] prices) {
         if (prices == null || prices.length == 0 || k <= 0) {

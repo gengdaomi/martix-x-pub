@@ -25,10 +25,10 @@ package com.martix.x.pub.dymaic;
  * <p>
  * Created By Andrew-Geng on 2020/5/16 12:42 上午
  */
-public class StockSailSolution {
+public class StockSailOnceSolution {
 
     public static void main(String[] args){
-        System.out.println(new StockSailSolution().maxProfit(new int[]{7,1,5,3,6,4}));
+        System.out.println(new StockSailOnceSolution().maxProfit(new int[]{7,1,5,3,6,4}));
     }
 
     /**
