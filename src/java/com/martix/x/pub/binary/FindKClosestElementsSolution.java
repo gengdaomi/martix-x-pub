@@ -35,7 +35,7 @@ import java.util.List;
  * 1 <= arr.length <= 104
  * 数组里的每个元素与 x 的绝对值不超过 104
  */
-public class FindClosestElementsSolution {
+public class FindKClosestElementsSolution {
 
     /**
      * 核心思路：
