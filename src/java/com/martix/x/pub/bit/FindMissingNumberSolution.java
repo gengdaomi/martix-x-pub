@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by Andrew-Geng on 10:38 下午 2021/4/23
  * 丢失的数字
  * <p>
- * lc 286
+ * lc 268
  * <p>
  * 给定一个包含 [0, n]中n个数的数组 nums ，找出 [0, n] 这个范围内没有出现在数组中的那个数。
  * <p>
