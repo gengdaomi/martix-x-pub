@@ -14,7 +14,7 @@ package com.martix.x.pub.tree;
  * 输出: 2
  * 解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。
  */
-public class FindBinaryTreeLCASolution {
+public class FindLCABSTSolution {
 
     /**
      * 相比lc 236来说，该题的特点是二叉搜索树，即左子树的所有节点都小于当前节点，右子树的所有节点都大于当前节点，并且每棵子树都具有上述特点
