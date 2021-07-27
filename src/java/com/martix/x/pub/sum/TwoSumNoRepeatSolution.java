@@ -6,6 +6,11 @@ import java.util.List;
 
 /**
  * Created by Andrew-Geng on 1:25 上午 2021/4/15
+ * 给定一个已按照 升序排列的整数数组numbers ，请你从数组中找出两个数满足相加之和等于目标数target 。
+ * <p>
+ * 函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。
+ * numbers 的下标 从 1 开始计数 ，所以答案数组应当满足 1 <= answer[0] < answer[1] <= numbers.length 。
+
  * 还是两数相加，大体要求跟TwoSumAscSolution的要求一致，只是要保证返回的数组集合中不存在重复的数组
  * 因为nums中可能存在多对子数组的和为target，
  * 比如[1,2] [2,1] target是3，但是这两个数组重复
