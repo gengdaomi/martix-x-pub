@@ -27,7 +27,7 @@ package com.martix.x.pub.list;
  * 输出：返回 null
  * 解释：链表中没有环。
  */
-public class DetectCycleListSolution {
+public class CycleDetectListSolution {
 
     /**
      * 第一次相遇的时候，假设slow走了k步，那么fast就走了2k步； 也就是说fast一定会比slow多走k步
