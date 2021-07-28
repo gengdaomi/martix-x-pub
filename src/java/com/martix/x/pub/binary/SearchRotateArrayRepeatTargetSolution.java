@@ -38,11 +38,11 @@ package com.martix.x.pub.binary;
  * 这是 搜索旋转排序数组的延伸题目，本题中的nums可能包含重复元素。
  * 这会影响到程序的时间复杂度吗？会有怎样的影响，为什么？
  */
-public class SearchRotateArrayRepeatSolution {
+public class SearchRotateArrayRepeatTargetSolution {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 0, 1, 1, 1};
 
-        boolean s = new SearchRotateArrayRepeatSolution().search_1(nums, 0);
+        boolean s = new SearchRotateArrayRepeatTargetSolution().search_1(nums, 0);
         System.out.println(s);
     }
 

@@ -35,12 +35,12 @@ package com.martix.x.pub.binary;
  * 题目数据保证 nums 在预先未知的某个下标上进行了旋转
  * -10^4 <= target <= 10^4
  */
-public class SearchRotateArraySolution {
+public class SearchRotateArrayTargetSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{4, 5, 6, 7, 0, 1, 2};
 
-        int s = new SearchRotateArraySolution().search_1(nums, 6);
+        int s = new SearchRotateArrayTargetSolution().search_1(nums, 6);
         System.out.println(s);
     }
 
