@@ -102,7 +102,7 @@ public class SortArrayByParity2Solution {
         for (int i = 0; i < n; i += 2) { //i作为偶数的下标
             if (nums[i] % 2 == 1) {
 
-                while (nums[j] % 2 == 1 & j < n) {
+                while (nums[j] % 2 == 1 && j < n) {
                     j += 2;
                 }
 
@@ -119,4 +119,9 @@ public class SortArrayByParity2Solution {
         A[j] = temp;
     }
 
+    public static void main(String[] args){
+        int[] nums = new int[]{4,2,3,6,5,7};
+        int[] result = new SortArrayByParity2Solution().sortArrayByParityII_1(nums);
+        System.out.println(result);
+    }
 }
