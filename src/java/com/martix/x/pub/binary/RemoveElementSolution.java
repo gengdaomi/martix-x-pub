@@ -42,8 +42,8 @@ package com.martix.x.pub.binary;
 public class RemoveElementSolution {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{3, 3};
-        System.out.println(new RemoveElementSolution().removeElement_1(nums, 3));
+        int[] nums = new int[]{3,2,2,3};
+        System.out.println(new RemoveElementSolution().removeElement(nums, 3));
     }
 
     /**
