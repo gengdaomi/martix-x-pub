@@ -27,9 +27,9 @@ import java.util.List;
 public class SubSetSolution {
 
     public static void main(String[] args){
-        int[] nums= new int[]{1,2,3};
+        int[] nums= new int[]{0};
 
-        System.out.println(new SubSetSolution().subsets(3));
+        System.out.println(new SubSetSolution().subsets(nums));
     }
 
     private List<List<Integer>> result = new ArrayList<>();
