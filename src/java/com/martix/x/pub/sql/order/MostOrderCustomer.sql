@@ -68,7 +68,7 @@ select customer_number
             group by customer_number
             order by cnt desc
             LIMIT 1
-        )
+        );
 
 ##第二种解法
 select customer_number
