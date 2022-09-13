@@ -140,4 +140,9 @@ public class LongestValidBracketsSolution {
 
         return maxlength;
     }
+
+    public static void main(String[] args){
+       int k =  new LongestValidBracketsSolution().longestValidParentheses_2(")()())");
+        System.out.println(k);
+    }
 }
