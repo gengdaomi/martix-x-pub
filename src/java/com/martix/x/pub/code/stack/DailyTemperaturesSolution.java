@@ -17,7 +17,7 @@ public class DailyTemperaturesSolution {
     public static void main(String[] args) {
         int[] num2 = new int[]{73, 74, 75, 71, 69, 72, 76, 73};
 
-        int[] result = new DailyTemperaturesSolution().dailyTemperatures_1(num2);
+        int[] result = new DailyTemperaturesSolution().dailyTemperatures(num2);
         System.out.println(result);
     }
 

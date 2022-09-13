@@ -81,7 +81,7 @@ GROUP BY DepartmentId;
 SELECT
     Department.name AS 'Department',
     Employee.name AS 'Employee',
-    Salary
+    Employee.salary as 'Salary'
 FROM
     Employee JOIN Department
              ON Employee.DepartmentId = Department.Id
