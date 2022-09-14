@@ -23,7 +23,7 @@ public class FindMedianSortArraySolution {
 
     public static void main(String[] args) {
         int[] a = new int[]{1, 2};
-        int[] b = new int[]{3, 4};
+        int[] b = new int[]{3, 4,6};
         double s = new FindMedianSortArraySolution().findMedianSortedArrays(a, b);
         System.out.println(s);
     }
