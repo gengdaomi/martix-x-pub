@@ -25,7 +25,7 @@ import java.util.List;
  * 输出：[[1]]
  *
  */
-public class PermuteSolution {
+public class PermuteNumsSolution {
 
     /**
      * 回溯
