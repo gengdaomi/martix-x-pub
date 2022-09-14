@@ -19,16 +19,16 @@ import java.util.Map;
  * <p>
  * 输入: [2,2,1]
  * 输出: 1
- * 示例 2:
+ * 示例2:
  * <p>
  * 输入: [4,1,2,1,2]
  * 输出: 4
  */
-public class FindSingleNumberSolution {
+public class FindSingleNumber1Solution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{4, 1, 2, 1, 2};
-        System.out.println(new FindSingleNumberSolution().singleNumber_1(nums));
+        System.out.println(new FindSingleNumber1Solution().singleNumber_1(nums));
     }
 
     /**

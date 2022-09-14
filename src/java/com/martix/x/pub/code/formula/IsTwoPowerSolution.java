@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.bit;
+package com.martix.x.pub.code.formula;
 
 /**
  * Created by Andrew-Geng on 12:52 上午 2021/5/11
