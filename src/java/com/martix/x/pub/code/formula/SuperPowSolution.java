@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.expand;
+package com.martix.x.pub.code.formula;
 /**
  * Created by Andrew-Geng on 1:18 上午 2021/4/17
  * 超级次方 lc 372

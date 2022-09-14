@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.expand;
+package com.martix.x.pub.code.formula;
 
 /**
  * source: bytedancer
