@@ -8,8 +8,6 @@ package com.martix.x.pub.code.list;
  * <p>
  * 如果有两个中间结点，则返回第二个中间结点。
  * <p>
- *  
- * <p>
  * 示例 1：
  * <p>
  * 输入：[1,2,3,4,5]
@@ -26,7 +24,7 @@ package com.martix.x.pub.code.list;
  * <p>
  * 提示：
  * <p>
- * 给定链表的结点数介于 1 和 100 之间。
+ * 给定链表的结点数介于1和100之间。
  */
 public class MiddleNodeSolution {
 

@@ -23,8 +23,6 @@ import java.util.Map;
  * random_index：随机指针指向的节点索引（范围从0到n-1）；如果不指向任何节点，则为null。
  * 你的代码 只 接受原链表的头节点 head 作为传入参数。
  * <p>
- *  
- * <p>
  * 示例 1：
  * <p>
  * <p>
@@ -54,7 +52,7 @@ import java.util.Map;
  * <p>
  * 0 <= n <= 1000
  * -10000 <= Node.val <= 10000
- * Node.random 为空（null）或指向链表中的节点。
+ * Node.random为空（null）或指向链表中的节点。
  * <p>
  * 链接：https://leetcode-cn.com/problems/copy-list-with-random-pointer
  */

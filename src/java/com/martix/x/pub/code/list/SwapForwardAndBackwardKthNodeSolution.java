@@ -34,7 +34,7 @@ package com.martix.x.pub.code.list;
  * 1 <= k <= n <= 105
  * 0 <= Node.val <= 100
  */
-public class SwapNodeSolution {
+public class SwapForwardAndBackwardKthNodeSolution {
 
     /**
      * 通过交换节点的值，而不用交换两个节点

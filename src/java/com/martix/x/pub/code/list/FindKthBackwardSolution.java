@@ -17,7 +17,7 @@ package com.martix.x.pub.code.list;
  * <p>
  * 返回链表 4->5.
  */
-public class FindKthFromEndSolution {
+public class FindKthBackwardSolution {
 
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode slow = head, fast = head;
