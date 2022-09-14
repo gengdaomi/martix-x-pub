@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.heap;
+package com.martix.x.pub.code.arrays;
 
 import java.util.*;
 
@@ -33,7 +33,7 @@ import java.util.*;
  * 数组里的每个元素与 x 的绝对值不超过 104
  *
  */
-public class FindClosestElementsSolution {
+public class FindKClosestNumsSolution {
 
     /**
      * 核心思路：

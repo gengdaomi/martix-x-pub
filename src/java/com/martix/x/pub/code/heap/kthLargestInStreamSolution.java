@@ -38,16 +38,16 @@ package com.martix.x.pub.code.heap;
  * 最多调用 add 方法 104 次
  * 题目数据保证，在查找第 k 大元素时，数组中至少有 k 个元素
  */
-public class kthLargestClassSolution {
+public class kthLargestInStreamSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{4,5,8,2};
-        kthLargestClassSolution kthLargestClassSolution = new kthLargestClassSolution(3, nums);
-        kthLargestClassSolution.add(3);
-        kthLargestClassSolution.add(5);
-        kthLargestClassSolution.add(10);
-        kthLargestClassSolution.add(9);
-        kthLargestClassSolution.add(4);
+        kthLargestInStreamSolution kthLargestInStreamSolution = new kthLargestInStreamSolution(3, nums);
+        kthLargestInStreamSolution.add(3);
+        kthLargestInStreamSolution.add(5);
+        kthLargestInStreamSolution.add(10);
+        kthLargestInStreamSolution.add(9);
+        kthLargestInStreamSolution.add(4);
 
         System.out.println(nums);
     }
@@ -55,7 +55,12 @@ public class kthLargestClassSolution {
     private int[] heap;
     private int count = 0;
 
-    public kthLargestClassSolution(int k, int[] nums) {
+    /**
+     * 运用小顶堆的思路（小顶堆：父节点小于左右孩子节点）
+     * @param k
+     * @param nums
+     */
+    public kthLargestInStreamSolution(int k, int[] nums) {
         heap = new int[k + 1];
         count = 0;
         for (int num : nums) {
