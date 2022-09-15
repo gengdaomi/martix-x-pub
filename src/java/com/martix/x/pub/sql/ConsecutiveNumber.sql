@@ -49,14 +49,14 @@ Result 表：
      然后我们从上表中选择任意的 Num 获得想要的答案。同时我们需要添加关键字 DISTINCT ，因为如果一个数字连续出现超过 3 次，会返回重复元素
   */
 
-SELECT DISTINCT
-    log1.num AS ConsecutiveNums
+SELECT
+    DISTINCT log1.num AS ConsecutiveNums
 FROM
     Logs as log1,
     Logs as log2,
     Logs as log3
 WHERE
-        log1.id = log2.id - 1
-  AND log2.Id = log3.id - 1
+      log1.id = log2.id - 1
+  AND log2.id = log3.id - 1
   AND log1.num = log2.num
   AND log2.num = log3.num
