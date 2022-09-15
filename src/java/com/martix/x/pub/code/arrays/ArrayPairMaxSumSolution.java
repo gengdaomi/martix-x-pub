@@ -22,10 +22,11 @@ import java.util.Arrays;
  * 输出：9
  * 解释：最优的分法为 (2, 1), (2, 5), (6, 6). min(2, 1) + min(2, 5) + min(6, 6) = 1 + 2 + 6 = 9
  */
-public class ArrayPairSumSolution {
+public class ArrayPairMaxSumSolution {
 
     /**
      * 核心思路：排序
+     * 升序排序，求奇数位之和
      *
      * 每一组二元组(ai,bi)满足ai<=bi,(若不满足，交换即可)
      * 这样我们要求的总和 min(a0,b0)+min(a1,b1)+...+min(ai,bi)+...+min(an-1,bn-1)+min(an,bn)，即等于ai的所有总和，a0+a1+...+ai+..+an
