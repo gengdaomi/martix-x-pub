@@ -17,7 +17,6 @@ import java.util.List;
  * <p>
  * |a - x| < |b - x| 或者
  * |a - x| == |b - x| 且 a < b
- *  
  * <p>
  * 示例 1：
  * <p>
@@ -27,22 +26,25 @@ import java.util.List;
  * <p>
  * 输入：arr = [1,2,3,4,5], k = 4, x = -1
  * 输出：[1,2,3,4]
- *  
  * <p>
  * 提示：
  * <p>
  * 1 <= k <= arr.length
- * 1 <= arr.length <= 104
- * 数组里的每个元素与 x 的绝对值不超过 104
+ * 1 <= arr.length<= 104
+ * 数组里的每个元素与x 的绝对值不超过 104
  */
-public class FindKClosestElementsSolution {
+public class FindKClosestNumsSolution {
 
     /**
      * 核心思路：
      * 排除法（双指针）
      * <p>
      * 一个一个删，因为是有序数组，且返回的是连续升序子数组，所以 每一次删除的元素一定位于边界 ；
-     * 一共 7 个元素，要保留3 个元素，因此要删除 4 个元素；
+     * <p>
+     * 由于数组有序，所以最后找到的k个元素也一定是有序的，其实就是返回了一个长度为k的子数组，相当于在长度为n的数组中去掉n-k个数字，
+     * 而且去掉的顺序肯定是从两头开始去，因为距离x最远的数字肯定在首尾出现。
+     * 每次比较首尾两个数字跟x的距离，将距离大的那个数字删除，直到剩余的数组长度为k为止;
+     * <p>
      * 因为要删除的元素都位于边界，于是可以使用 双指针 对撞的方式确定保留区间，即「最优区间」
      * <p>
      * 时间复杂度O(n)
@@ -66,7 +68,6 @@ public class FindKClosestElementsSolution {
             } else {
                 left++;
             }
-
             removeNums--;
         }
 
@@ -74,7 +75,6 @@ public class FindKClosestElementsSolution {
         for (int i = left; i < left + k; i++) {
             result.add(arr[i]);
         }
-
         return result;
     }
 
@@ -90,7 +90,7 @@ public class FindKClosestElementsSolution {
      * @param x
      * @return
      */
-    public List<Integer> findClosestElements_1(int[] arr, int k, int x) {
+    public List<Integer> findClosestElements_2(int[] arr, int k, int x) {
         List<Integer> result = new ArrayList<>();
         for (int num : arr) {
             result.add(num);
