@@ -20,30 +20,35 @@ public class RainTrapSolution {
     }
 
     /**
+     *
      * water[i]=min(max(height[0..i]),max(height[i..n-1]))-height[i]，
      * 即表示第i个位置的雨水量，由i左边方格最高值，和 i右边方格最高值 的最小值决定，并最后减去i的方格高度
      * <p>
-     * 1. 先用暴力解法处理
-     * <p>
-     * 时间复杂度O(N^2)，空间复杂度O(1)
+     * 借助双指针的思路，进一步降低空间复杂度 到 O(1)
      *
      * @param height
      * @return
      */
-    public int trap(int[] height) {
+    public int trap_1(int[] height) {
+        if (height == null || height.length == 0) {
+            return 0;
+        }
+
+        int left = 0, right = height.length - 1;
         int result = 0;
+        int leftMax = height[0], rightMax = height[height.length - 1];
 
-        for (int i = 0; i < height.length - 1; i++) {
-            int leftMax = 0, rightMax = 0;
+        while (left <= right) {
+            leftMax = Math.max(leftMax, height[left]);
+            rightMax = Math.max(rightMax, height[right]);
 
-            for (int j = i; j >= 0; j--) {
-                leftMax = Math.max(leftMax, height[j]);  //j左边最高的柱子
+            if (leftMax < rightMax) {
+                result += leftMax - height[left];
+                left++;
+            } else {
+                result += rightMax - height[right];
+                right--;
             }
-            for (int j = i; j < height.length; j++) {
-                rightMax = Math.max(rightMax, height[j]);
-            }
-
-            result += Math.min(leftMax, rightMax) - height[i];
         }
 
         return result;
@@ -57,7 +62,7 @@ public class RainTrapSolution {
      * @param height
      * @return
      */
-    public int trap_1(int[] height) {
+    public int trap_2(int[] height) {
         if (height == null || height.length == 0) {
             return 0;
         }
@@ -84,37 +89,33 @@ public class RainTrapSolution {
     }
 
     /**
-     *
      * water[i]=min(max(height[0..i]),max(height[i..n-1]))-height[i]，
      * 即表示第i个位置的雨水量，由i左边方格最高值，和 i右边方格最高值 的最小值决定，并最后减去i的方格高度
      * <p>
-     * 借助双指针的思路，进一步降低空间复杂度 到 O(1)
+     * 1. 先用暴力解法处理
+     * <p>
+     * 时间复杂度O(N^2)，空间复杂度O(1)
      *
      * @param height
      * @return
      */
     public int trap_3(int[] height) {
-        if (height == null || height.length == 0) {
-            return 0;
-        }
-
-        int left = 0, right = height.length - 1;
         int result = 0;
-        int leftMax = height[0], rightMax = height[height.length - 1];
 
-        while (left <= right) {
-            leftMax = Math.max(leftMax, height[left]);
-            rightMax = Math.max(rightMax, height[right]);
+        for (int i = 0; i < height.length - 1; i++) {
+            int leftMax = 0, rightMax = 0;
 
-            if (leftMax < rightMax) {
-                result += leftMax - height[left];
-                left++;
-            } else {
-                result += rightMax - height[right];
-                right--;
+            for (int j = i; j >= 0; j--) {
+                leftMax = Math.max(leftMax, height[j]);  //j左边最高的柱子
             }
+            for (int j = i; j < height.length; j++) {
+                rightMax = Math.max(rightMax, height[j]);
+            }
+
+            result += Math.min(leftMax, rightMax) - height[i];
         }
 
         return result;
     }
+
 }

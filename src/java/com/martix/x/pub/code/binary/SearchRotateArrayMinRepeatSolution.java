@@ -31,7 +31,7 @@ package com.martix.x.pub.code.binary;
  * <p>
  * 进阶：
  * <p>
- * 这道题是 寻找旋转排序数组中的最小值 的延伸题目。
+ * 这道题是寻找旋转排序数组中的最小值的延伸题目。
  * 允许重复会影响算法的时间复杂度吗？会如何影响，为什么？
  */
 public class SearchRotateArrayMinRepeatSolution {
