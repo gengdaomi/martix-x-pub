@@ -24,17 +24,17 @@
 
 ## 第一种方法 使用 GROUP BY 和临时表
 
- select distinct Email
+ select distinct email
      from (
-     select Email,count(email) as num
+     select email,count(email) as num
          from Person
-         group by Email
+         group by email
            ) as tmp
      where tmp.num>=2;
 
 ## 第2种方法  使用 GROUP BY 和 HAVING 条件
 
-select Email
+select email
   from Person
-     group by Email
-    having count(Email) > 1;
+     group by email
+    having count(email) > 1;
