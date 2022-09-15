@@ -17,6 +17,9 @@ package com.martix.x.pub.code.calculate;
  */
 public class MultiplyRecursionSolution {
 
+    public static void main(String[] args){
+    }
+
     private int result = 0;
 
     /**
@@ -36,6 +39,14 @@ public class MultiplyRecursionSolution {
         return result;
     }
 
+    /**
+     * >>位运算符右移,不会忽略符号位
+     *
+     * >>>无符号右移，忽略符号位，空位都以0补齐
+     * @param min
+     * @param max
+     * @param i
+     */
     private void recursion(int min, int max, int i) {
         if ((min >>> i) == 0){
             return;
