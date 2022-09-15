@@ -9,25 +9,23 @@ package com.martix.x.pub.code.arrays;
  * <p>
  * 你可以返回满足此条件的任何数组作为答案。
  * <p>
- *  
- * <p>
  * 示例：
  * <p>
  * 输入：[3,1,2,4]
  * 输出：[2,4,3,1]
  * 输出 [4,2,3,1]，[2,4,1,3] 和 [4,2,1,3] 也会被接受。
- *  
+ *
  * <p>
  * 提示：
  * <p>
  * 1 <= A.length <= 5000
  * 0 <= A[i] <= 5000
  */
-public class SortArrayByParitySolution {
+public class SortArrayByParity1Solution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{3, 1, 2, 4};
-        int[] result = new SortArrayByParitySolution().sortArrayByParity(nums);
+        int[] result = new SortArrayByParity1Solution().sortArrayByParity(nums);
 
         System.out.println(result);
     }

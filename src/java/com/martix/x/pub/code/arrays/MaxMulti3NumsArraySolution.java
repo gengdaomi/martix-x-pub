@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 输入：nums = [-1,-2,-3]
  * 输出：-6
  */
-public class MaxMulti3NumArraySolution {
+public class MaxMulti3NumsArraySolution {
 
 
     /**

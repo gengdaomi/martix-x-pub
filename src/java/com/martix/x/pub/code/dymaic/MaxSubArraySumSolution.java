@@ -22,11 +22,11 @@ package com.martix.x.pub.code.dymaic;
  * 可以通过判断sum[i-1] + a[i]是否大于a[i]来做选择，而这实际上等价于判断sum[i-1]是否大于0。
  * 由于每次运算只需要前一次的结果，因此并不需要像普通的动态规划那样保留之前所有的计算结果，只需要保留上一次的即可，因此算法的时间和空间复杂度都很小
  */
-public class MaxSubArraySolution {
+public class MaxSubArraySumSolution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println(new MaxSubArraySolution().maxSubArray_2(arr));
+        System.out.println(new MaxSubArraySumSolution().maxSubArray_2(arr));
     }
 
     public int maxSubArray(int[] nums) {

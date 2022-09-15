@@ -14,7 +14,6 @@ import java.util.*;
  *
  * |a - x| < |b - x| 或者
  * |a - x| == |b - x| 且 a < b
- *  
  *
  * 示例 1：
  *
@@ -24,13 +23,12 @@ import java.util.*;
  *
  * 输入：arr = [1,2,3,4,5], k = 4, x = -1
  * 输出：[1,2,3,4]
- *  
  *
  * 提示：
  *
  * 1 <= k <= arr.length
- * 1 <= arr.length <= 104
- * 数组里的每个元素与 x 的绝对值不超过 104
+ * 1 <= arr.length<= 104
+ * 数组里的每个元素与x 的绝对值不超过 104
  *
  */
 public class FindKClosestNumsSolution {
@@ -66,11 +64,11 @@ public class FindKClosestNumsSolution {
             removeNums--;
         }
 
-        List<Integer> res = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         for (int i = left; i < left + k; i++) {
-            res.add(arr[i]);
+            result.add(arr[i]);
         }
-        return res;
+        return result;
     }
 
     /**
