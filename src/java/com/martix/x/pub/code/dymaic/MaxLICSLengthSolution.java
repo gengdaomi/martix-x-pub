@@ -23,7 +23,7 @@ import java.util.Arrays;
  * 解释：最长连续递增序列是 [2], 长度为1
  * <p>
  */
-public class MaxLICSSolution {
+public class MaxLICSLengthSolution {
 
     /**
      * 动态规划
@@ -123,7 +123,7 @@ public class MaxLICSSolution {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 3, 5, 4, 7};
 
-        int result = new MaxLICSSolution().findLengthOfLCIS(arr);
+        int result = new MaxLICSLengthSolution().findLengthOfLCIS(arr);
         System.out.println(result);
     }
 }

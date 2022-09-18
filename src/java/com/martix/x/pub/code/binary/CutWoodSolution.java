@@ -19,7 +19,7 @@ package com.martix.x.pub.code.binary;
 public class CutWoodSolution {
 
     public static void main(String[] args) {
-        int s = new CutWoodSolution().cutWood(new int[]{4,7,2,10,5},5);
+        int s = new CutWoodSolution().cutWood(new int[]{4, 7, 2, 10, 5}, 5);
         System.out.println(s);
     }
 
@@ -32,9 +32,9 @@ public class CutWoodSolution {
      * 实际编写代码时, 相当于找到最后一个 cnt >= k 的长度 len
      * <p>
      * 1.求的是 最后一个 cnt >= k 的长度, 所以每次要向右移动, 于是向上取整, 有 mid = left + right + 1 >> 1,
-     *   有+1;
+     * 有+1;
      * 2.考虑两个元素的情况, 如果 mid 落在右边那一个元素, 这时 cnt < k, 所以 right = mid - 1;
-     *   若 right= mid , 则下一次 mid 仍然不变, 无法跳出循环
+     * 若 right= mid , 则下一次 mid 仍然不变, 无法跳出循环
      * <p>
      * <p>
      * 时间复杂度O(n*logLen)
@@ -75,7 +75,6 @@ public class CutWoodSolution {
      * int mid = left + right + 1 >> 1;
      * left = mid;
      * right = mid - 1;
-
      * 第二种:(一般用于 取 最后一个符合题意的值)
      *
      * int mid = left + right + 1 >> 1;
@@ -86,17 +85,18 @@ public class CutWoodSolution {
 
     /**
      * 暴力解法 不推荐
-     *
+     * <p>
      * 遍历 1 到 木棍最长的长度, 每次遍历的长度作为 m,
      * 以 m 为长度截取木头, 若能截取出 k个长度为m的木块，
      * 则更新最大值，最后输出最大值即可
-     *
+     * <p>
      * 时间复杂度O(n * len), len为木头中最大的长度
+     *
      * @param nums
      * @param k
      * @return
      */
-    public int cutWood_1(int[] nums, int k){
+    public int cutWood_1(int[] nums, int k) {
         int maxLen = 0;// 找到最大长度的木头
         for (int i = 0; i < nums.length; i++) {
             maxLen = Math.max(maxLen, nums[i]);

@@ -110,7 +110,7 @@ WHERE
 ;
 
   显然，列 sales_id 在 salesperson 中，所以我们把它当做子查询并使用 NOT IN 获得想要的数据。
-  
+
  */
 SELECT
     s.name

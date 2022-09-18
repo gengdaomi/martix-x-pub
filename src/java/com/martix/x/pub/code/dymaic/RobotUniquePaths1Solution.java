@@ -22,7 +22,7 @@ package com.martix.x.pub.code.dymaic;
  * 输入：m = 7, n = 3
  * 输出：28
  */
-public class RobotUniquePathsSolution {
+public class RobotUniquePaths1Solution {
 
     /**
      * 我们用f(i,j) 表示从左上角走到(i,j) 的路径数量，其中i 和 j的范围分别是[0,m) 和 [0,n);

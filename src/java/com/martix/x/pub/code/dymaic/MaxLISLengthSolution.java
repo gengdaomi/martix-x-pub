@@ -27,7 +27,7 @@ import java.util.Arrays;
  * <p>
  * lc 300
  */
-public class MaxLISSolution {
+public class MaxLISLengthSolution {
 
     /**
      * 动态规划
@@ -74,6 +74,6 @@ public class MaxLISSolution {
 
     public static void main(String[] args) {
         int[] i = new int[]{10, 9, 2, 5, 3, 7, 101, 18};
-        System.out.println(new MaxLISSolution().lengthOfLIS(i));
+        System.out.println(new MaxLISLengthSolution().lengthOfLIS(i));
     }
 }
