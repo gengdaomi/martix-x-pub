@@ -31,7 +31,7 @@ import java.util.Map;
  * 3.  -3 -> 11
  * <p>
  */
-public class PathSum2Solution {
+public class PathSumNoNeedRootSolution {
 
     public int pathSum(TreeNode root, int sum) {
         if (root == null) {
