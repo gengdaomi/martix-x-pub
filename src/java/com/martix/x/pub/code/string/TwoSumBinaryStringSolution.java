@@ -25,10 +25,10 @@ package com.martix.x.pub.code.string;
  * 1 <= a.length, b.length <= 10^4
  * 字符串如果不是 "0" ，就都不含前导零。
  */
-public class AddBinaryStringSolution {
+public class TwoSumBinaryStringSolution {
 
     public static void main(String[] args) {
-        String result = new AddBinaryStringSolution().addBinary_1("1010", "1011");
+        String result = new TwoSumBinaryStringSolution().addBinary_1("1010", "1011");
         System.out.println(result);
     }
 

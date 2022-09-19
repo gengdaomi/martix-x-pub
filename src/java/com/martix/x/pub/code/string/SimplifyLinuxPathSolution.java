@@ -46,11 +46,11 @@ import java.util.Stack;
  * <p>
  * Created By Andrew-Geng on 2020/5/13 5:30 下午
  */
-public class SimplePathSolution {
+public class SimplifyLinuxPathSolution {
 
     public static void main(String[] args) {
-        SimplePathSolution simplePathSolution = new SimplePathSolution();
-        String result = simplePathSolution.simplifyPath("/a/");
+        SimplifyLinuxPathSolution simplifyLinuxPathSolution = new SimplifyLinuxPathSolution();
+        String result = simplifyLinuxPathSolution.simplifyPath("/a/");
 
         System.out.println(result);
     }

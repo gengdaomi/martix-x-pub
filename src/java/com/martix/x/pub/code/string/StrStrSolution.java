@@ -76,7 +76,7 @@ public class StrStrSolution {
 
         return -1;
     }
-    
+
     /**
      * 暴力解法
      * <p>

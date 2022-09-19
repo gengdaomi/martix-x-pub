@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.string;
+package com.martix.x.pub.code.sum;
 
 /**
  * Created by Andrew-Geng on 12:00 上午 2021/6/28
@@ -14,7 +14,7 @@ package com.martix.x.pub.code.string;
  * 你不能使用任何內建 BigInteger 库，也不能直接将输入的字符串转换为整数形式
  *
  */
-public class AddStringSolution {
+public class TwoSumStringSolution {
 
     /**
      *
