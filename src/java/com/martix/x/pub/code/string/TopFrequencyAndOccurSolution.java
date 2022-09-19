@@ -23,6 +23,11 @@ public class TopFrequencyAndOccurSolution {
         System.out.println(s);
     }
 
+    /**
+     * 要求且最早出现的字符，因此采用倒序遍历；如"aaaccc",正序遍历为c，倒序遍历则为a
+     * @param s
+     * @return
+     */
     public static char getMaxOccurChar(String s) {
         char[] arr = s.toCharArray();
         int n = arr.length;
@@ -31,7 +36,7 @@ public class TopFrequencyAndOccurSolution {
             return ' ';
         }
 
-        int[] numArr = new int[128];
+        int[] numArr = new int[26];
         Arrays.fill(numArr, 0);
         int i;
 
@@ -39,11 +44,10 @@ public class TopFrequencyAndOccurSolution {
         char result = ' ';//结果字符
 
         for (i = n - 1; i >= 0; i--) {//倒序遍历
-            int index = (byte) arr[i];
-            numArr[index] = numArr[index] + 1;
+            numArr[arr[i]-'a']++;
 
-            if (numArr[index] >= max) {//动态更新最高频次及对应字符
-                max = numArr[index];
+            if (numArr[arr[i]-'a'] >= max) {//动态更新最高频次及对应字符
+                max = numArr[arr[i]-'a'];
                 result = arr[i];
             }
         }
