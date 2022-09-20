@@ -14,7 +14,7 @@ package com.martix.x.pub.code.binary;
  * 输入：num = 14
  * 输出：false
  */
-public class SquarePerfectValidateSolution {
+public class SqrtPerfectValidateSolution {
 
     /**
      * 二分查找

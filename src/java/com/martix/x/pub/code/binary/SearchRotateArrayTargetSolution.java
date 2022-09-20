@@ -11,14 +11,13 @@ package com.martix.x.pub.code.binary;
  * 例如， [0,1,2,4,5,6,7] 在下标 3 处经旋转后可能变为[4,5,6,7,0,1,2] 。
  * <p>
  * 给你 旋转后 的数组 nums 和一个整数 target ，如果 nums 中存在这个目标值 target ，则返回它的下标，否则返回-1。
- * <p>
- *  
- * <p>
+ *
+ *
  * 示例 1：
  * <p>
  * 输入：nums = [4,5,6,7,0,1,2], target = 0
  * 输出：4
- * 示例 2：
+ * 示例2：
  * <p>
  * 输入：nums = [4,5,6,7,0,1,2], target = 3
  * 输出：-1
@@ -26,7 +25,7 @@ package com.martix.x.pub.code.binary;
  * <p>
  * 输入：nums = [1], target = 0
  * 输出：-1
- *  
+ *
  * <p>
  * 提示：
  * <p>

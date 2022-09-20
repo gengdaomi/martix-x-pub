@@ -37,12 +37,12 @@ package com.martix.x.pub.code.binary;
  * nums 中的所有整数 互不相同
  * nums 原来是一个升序排序的数组，并进行了 1 至 n 次旋转
  */
-public class SearchRotateArrayMinSolution {
+public class SearchRotateArrayMinNoRepeatSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{11,13,15,17};
 
-        int s = new SearchRotateArrayMinSolution().findMin(nums);
+        int s = new SearchRotateArrayMinNoRepeatSolution().findMin(nums);
         System.out.println(s);
     }
 

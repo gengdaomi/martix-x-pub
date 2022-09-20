@@ -18,6 +18,9 @@ package com.martix.x.pub.code.calculate;
 public class MultiplyRecursionSolution {
 
     public static void main(String[] args){
+        int x=4,y=6;
+        int result = new MultiplyRecursionSolution().multiply(x,y);
+        System.out.println(result);
     }
 
     private int result = 0;

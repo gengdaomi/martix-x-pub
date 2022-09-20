@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 输出：0
  *
  */
-public class FindUnsortedSubarraySolution {
+public class FindUnsortedSubArraySolution {
 
     /**
      * 双指针
@@ -49,7 +49,6 @@ public class FindUnsortedSubarraySolution {
         int min = nums[length-1];
         int max = nums[0];
         int begin = 0, end = -1;
-
 
         for(int i = 0; i < length; i++){//遍历
             if(nums[i] < max){      //从左到右维持最大值，寻找右边界end
