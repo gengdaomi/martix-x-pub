@@ -26,7 +26,7 @@ package com.martix.x.pub.code.list;
  * <p>
  * Created By Andrew-Geng on 2020/5/14 1:59 下午
  */
-public class AddTwoSolution {
+public class TwoListSumDescSolution {
 
     public static void main(String[] args) {
     }

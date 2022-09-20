@@ -19,7 +19,7 @@ import java.util.Stack;
  * 输入：(7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
  * 输出：7 -> 8 -> 0 -> 7
  */
-public class AddTwo2Solution {
+public class TwoListSumAscSolution {
     /**
      * 运用链表反转的思路
      *
