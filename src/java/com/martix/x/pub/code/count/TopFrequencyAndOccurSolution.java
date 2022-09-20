@@ -19,7 +19,7 @@ import java.util.Map;
 public class TopFrequencyAndOccurSolution {
 
     public static void main(String[] args) {
-        char s = getMaxOccurChar("aaaahfdfbbbbbbbbbb");
+        char s = getMaxOccurChar("hello world,every body!");
         System.out.println(s);
     }
 
@@ -39,11 +39,10 @@ public class TopFrequencyAndOccurSolution {
         char result = ' ';//结果字符
 
         for (i = n - 1; i >= 0; i--) {//倒序遍历
-            int index = (byte) arr[i];
-            numArr[index] = numArr[index] + 1;
+            numArr[arr[i]-'a']++;
 
-            if (numArr[index] >= max) {//动态更新最高频次及对应字符
-                max = numArr[index];
+            if (numArr[arr[i]-'a'] >= max) {//动态更新最高频次及对应字符
+                max = numArr[arr[i]-'a'];
                 result = arr[i];
             }
         }

@@ -36,7 +36,7 @@ public class TopFrequencyAndOccurSolution {
             return ' ';
         }
 
-        int[] numArr = new int[26];
+        int[] numArr = new int[512];
         Arrays.fill(numArr, 0);
         int i;
 
