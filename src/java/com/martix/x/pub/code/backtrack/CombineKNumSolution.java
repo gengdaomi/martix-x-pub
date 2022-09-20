@@ -25,7 +25,7 @@ import java.util.List;
  * ]
  *
  */
-public class CombineSolution {
+public class CombineKNumSolution {
 
     /**
      * 回溯算法是在一棵树上的 深度优先遍历;

@@ -24,12 +24,12 @@ import java.util.List;
  *   []
  * ]
  */
-public class SubSetSolution {
+public class SubSetUniqueSolution {
 
     public static void main(String[] args){
         int[] nums= new int[]{0};
 
-        System.out.println(new SubSetSolution().subsets(nums));
+        System.out.println(new SubSetUniqueSolution().subsets(nums));
     }
 
     private List<List<Integer>> result = new ArrayList<>();

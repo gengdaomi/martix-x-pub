@@ -62,11 +62,11 @@ public class SplitPalindromeSolution {
             }
         }
 
-        dfs(s, 0);
+        this.dfs(s, 0);
         return ret;
     }
 
-    public void dfs(String s, int i) {
+    private void dfs(String s, int i) {
         if (i == n) {
             ret.add(new ArrayList<String>(ans));
             return;
