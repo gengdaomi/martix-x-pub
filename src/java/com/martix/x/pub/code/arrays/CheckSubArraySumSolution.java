@@ -27,11 +27,11 @@ import java.util.Map;
  * 数组的长度不会超过 10,000 。
  * 你可以认为所有数字总和在 32 位有符号整数范围内。
  */
-public class CheckSubarraySumSolution {
+public class CheckSubArraySumSolution {
 
     public static void main(String[] args) {
         int[] num = new int[]{1, 1};
-        boolean f = new CheckSubarraySumSolution().checkSubarraySum(num, 1);
+        boolean f = new CheckSubArraySumSolution().checkSubarraySum(num, 1);
         System.out.println(f);
     }
 

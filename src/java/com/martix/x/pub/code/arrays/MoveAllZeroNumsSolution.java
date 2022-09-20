@@ -5,11 +5,11 @@ package com.martix.x.pub.code.arrays;
  * 示例: 输入: [0,1,0,3,12] 输出: [1,3,12,0,0]
  * 说明: 必须在原数组上操作，不能拷贝额外的数组。 尽量减少操作次数
  */
-public class MoveNumberSolution {
+public class MoveAllZeroNumsSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{0, 1, 0, 3, 12};
-        new MoveNumberSolution().moveZero(nums);
+        new MoveAllZeroNumsSolution().moveZero(nums);
         System.out.println(nums);
     }
 

@@ -20,11 +20,11 @@ package com.martix.x.pub.code.arrays;
  * 0 < nums[i] < 1000
  * 0 <= k < 10^6
  */
-public class SubarrayMultiLessThanKSolution {
+public class SubArrayMultiLessThanKSolution {
 
     public static void main(String[] args) {
         int[] num = new int[]{10, 9, 10, 4, 3, 8, 3, 3, 6, 2, 10, 10, 9, 3};
-        int result = new SubarrayMultiLessThanKSolution().numSubarrayProductLessThanK(num, 19);
+        int result = new SubArrayMultiLessThanKSolution().numSubarrayProductLessThanK(num, 19);
         System.out.println(result);
     }
 

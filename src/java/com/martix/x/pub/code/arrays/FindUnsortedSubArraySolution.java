@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 输出：0
  *
  */
-public class FindUnsortedSubarraySolution {
+public class FindUnsortedSubArraySolution {
 
     /**
      * 双指针

@@ -28,11 +28,11 @@ import java.util.List;
  * 输入：target = 11, nums = [1,1,1,1,1,1,1,1]
  * 输出：0
  */
-public class MinSubArraySumSolution {
+public class MinSumSubArrayTargetSolution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{2, 3, 1, 2, 4, 3};
-        System.out.println(new MinSubArraySumSolution().minSubArrayLen(7, arr));
+        System.out.println(new MinSumSubArrayTargetSolution().minSubArrayLen(7, arr));
     }
 
     /**
