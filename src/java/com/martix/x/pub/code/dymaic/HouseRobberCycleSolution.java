@@ -10,7 +10,7 @@ package com.martix.x.pub.code.dymaic;
  * <p>
  * 给定一个代表每个房屋存放金额的非负整数数组，计算你 在不触动警报装置的情况下 ，今晚能够偷窃到的最高金额。
  * <p>
- * 示例 1：
+ * 示例1：
  * <p>
  * 输入：nums = [2,3,2]
  * 输出：3
@@ -20,7 +20,7 @@ package com.martix.x.pub.code.dymaic;
  * 输入：nums = [1,2,3,1]
  * 输出：4
  * 解释：你可以先偷窃 1 号房屋（金额 = 1），然后偷窃 3 号房屋（金额 = 3）。
- *      偷窃到的最高金额 = 1 + 3 = 4 。
+ *     偷窃到的最高金额 = 1 + 3 = 4 。
  */
 public class HouseRobberCycleSolution {
 
