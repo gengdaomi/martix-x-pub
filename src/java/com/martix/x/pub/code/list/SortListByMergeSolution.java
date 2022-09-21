@@ -14,7 +14,7 @@ package com.martix.x.pub.code.list;
  * <p>
  * Created By Andrew-Geng on 2020/5/14 2:46 下午
  */
-public class SortListSolution {
+public class SortListByMergeSolution {
 
     public static void main(String[] args) {
     }

@@ -31,7 +31,7 @@ import java.util.List;
  * 输入: n = 4, k = 9
  * 输出: "2314"
  */
-public class kthLargestPermutationSolution {
+public class KthLargestPermutationSolution {
 
 
     public static void main(String[] args) {

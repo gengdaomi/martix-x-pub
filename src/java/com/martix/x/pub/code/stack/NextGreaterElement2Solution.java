@@ -24,7 +24,7 @@ package com.martix.x.pub.code.stack;
 public class NextGreaterElement2Solution {
 
     public static void main(String[] args) {
-        int n = 2147483468;
+        int n = 1234;
 
         int result = new NextGreaterElement2Solution().nextGreaterElement(n);
         System.out.println(result);
