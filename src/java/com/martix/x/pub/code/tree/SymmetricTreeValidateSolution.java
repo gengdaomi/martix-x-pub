@@ -30,7 +30,7 @@ import java.util.*;
  * <p>
  * 你可以运用递归和迭代两种方法解决这个问题吗？
  */
-public class SymmetricTreeSolution {
+public class SymmetricTreeValidateSolution {
 
     /**
      * 递归的方式
@@ -121,7 +121,7 @@ public class SymmetricTreeSolution {
     public static void main(String[] args){
         List<String> result = List.of("3","4","5","3");
 
-        System.out.println(new SymmetricTreeSolution().isPalindrome(result));
+        System.out.println(new SymmetricTreeValidateSolution().isPalindrome(result));
 
     }
 }

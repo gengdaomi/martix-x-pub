@@ -91,34 +91,39 @@ public class MaxTreeWidthSolution {
      */
     public int widthOfBinaryTree_1(TreeNode root){
         int result = 1;
-        List<Pair<TreeNode, Integer>> pairList = new ArrayList<>();
+        List<Tuple<TreeNode, Integer>> tupleList = new ArrayList<>();
 
-        pairList.add(new Pair<>(root, 1));
-        while (!pairList.isEmpty()) {
-            List<Pair<TreeNode, Integer>> tmp = new ArrayList<>();
-            for (Pair<TreeNode, Integer> pair : pairList) {
-                TreeNode node = pair.getKey();
-                int index = pair.getValue();
+        tupleList.add(new Tuple<>(root, 1));
+        while (!tupleList.isEmpty()) {
+            List<Tuple<TreeNode, Integer>> tmp = new ArrayList<>();
+            for (Tuple<TreeNode, Integer> tuple : tupleList) {
+                TreeNode node = tuple.getKey();
+                int index = tuple.getValue();
                 if (node.left != null) {
-                    tmp.add(new Pair<>(node.left, index * 2));
+                    tmp.add(new Tuple<>(node.left, index * 2));
                 }
                 if (node.right != null) {
-                    tmp.add(new Pair<>(node.right, index * 2 + 1));
+                    tmp.add(new Tuple<>(node.right, index * 2 + 1));
                 }
             }
 
-            result = Math.max(result, pairList.get(pairList.size() - 1).getValue() - pairList.get(0).getValue() + 1);
-            pairList = tmp;
+            result = Math.max(result, tupleList.get(tupleList.size() - 1).getValue() - tupleList.get(0).getValue() + 1);
+            tupleList = tmp;
         }
 
         return result;
     }
 
-    class Pair<TreeNode,Integer>{
+    /**
+     * 二元组类
+     * @param <TreeNode>
+     * @param <Integer>
+     */
+    class Tuple<TreeNode,Integer>{
         private TreeNode key;
         private Integer value;
 
-        public Pair(TreeNode treeNode,Integer value){
+        public Tuple(TreeNode treeNode,Integer value){
             this.key = treeNode;
             this.value = value;
         }
