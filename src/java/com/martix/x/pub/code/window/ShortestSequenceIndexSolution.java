@@ -25,10 +25,10 @@ import java.util.Map;
  * small = [4]
  * 输出: []
  */
-public class ShortestSequenceNumsSolution {
+public class ShortestSequenceIndexSolution {
 
     public static void main(String[] args){
-        int[] s = new ShortestSequenceNumsSolution().shortestSeq(new int[]{7,5,9,0,2,1,3,5,7,9,1,1,5,8,8,9,7},new int[]{1,5,9});
+        int[] s = new ShortestSequenceIndexSolution().shortestSeq(new int[]{7,5,9,0,2,1,3,5,7,9,1,1,5,8,8,9,7},new int[]{1,5,9});
         System.out.println(s);
     }
 
