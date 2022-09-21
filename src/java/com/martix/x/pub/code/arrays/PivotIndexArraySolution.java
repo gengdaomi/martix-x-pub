@@ -38,11 +38,11 @@ package com.martix.x.pub.code.arrays;
  * nums 的长度范围为[0, 10000]。
  * 任何一个nums[i] 将会是一个范围在[-1000, 1000]的整数。
  */
-public class PivotIndexSolution {
+public class PivotIndexArraySolution {
 
     public static void main(String[] args) {
         int[] num = new int[]{1, 2, 3};
-        System.out.println(new PivotIndexSolution().pivotIndex(num));
+        System.out.println(new PivotIndexArraySolution().pivotIndex(num));
     }
 
     /**

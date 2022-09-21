@@ -46,7 +46,7 @@ import java.util.List;
  * 可以看到以1开头的有1 =1种，同理4的都是这样
  * 上一把余数是0，所以0/1 = 0..1，结果数据就是索引为0的1（第0个是1）
  */
-public class PermutationArraySolution {
+public class PermuteArraySolution {
 
     /**
      * 时间复杂度O(n^2) 空间复杂度O(n)
