@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 解释: 最长递增子序列的长度是1，并且存在5个子序列的长度为1，因此输出5。
  *
  */
-public class MaxLICSCountSolution {
+public class MaxLISCountSolution {
 
     /**
      * 动态规划

@@ -138,8 +138,8 @@ public class CheckSubSequenceSolution {
 
 
     public static void main(String[] args) {
-        String s = "axc", t = "ahbgdc";
+        String s = "abc", t = "ahbgdc";
 
-        System.out.println(new CheckSubSequenceSolution().isSubsequence(s, t));
+        System.out.println(new CheckSubSequenceSolution().isSubsequence_1(s, t));
     }
 }
