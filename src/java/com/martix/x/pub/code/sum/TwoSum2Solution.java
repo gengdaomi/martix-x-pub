@@ -9,6 +9,7 @@ import java.util.stream.IntStream;
  *
  * Created by Andrew-Geng on 4:33 下午 2021/3/19
  */
+@Deprecated
 public class TwoSum2Solution {
     private static class Node implements Comparable<Node> {
         public int idx;
