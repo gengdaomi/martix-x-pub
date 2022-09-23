@@ -70,7 +70,7 @@ GROUP BY class
                     courses
                 GROUP BY class
             ) as tmp
-       where nums >=5;
+       where tmp.nums >=5;
 
 ## 第二种解法
 /**
