@@ -12,7 +12,7 @@ package com.martix.x.pub.code.list;
  * 输入: 1->1->1->2->3
  * 输出: 2->3
  */
-public class RemovedDuplicates2Solution {
+public class RemovedDuplicates2SortedSolution {
 
     /**
      * 由于给定的链表是排好序的，因此重复的元素在链表中出现的位置是连续的，因此我们只需要对链表进行一次遍历，就可以删除重复的元素。

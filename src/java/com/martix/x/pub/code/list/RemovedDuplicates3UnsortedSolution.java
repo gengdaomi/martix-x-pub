@@ -25,7 +25,7 @@ import java.util.Set;
  * <p>
  * 如果不得使用临时缓冲区，该怎么解决？
  */
-public class RemovedDuplicates3Solution {
+public class RemovedDuplicates3UnsortedSolution {
 
     /**
      * 传统的方式，创建了一个临时缓冲区hash区，缓冲各个节点的值

@@ -12,7 +12,7 @@ package com.martix.x.pub.code.list;
  * 输入: 1->1->1->2->3
  * 输出: 1->2->3
  */
-public class RemovedDuplicates1Solution {
+public class RemovedDuplicates1SortedSolution {
 
     /**
      * 通过快慢指针的方式
