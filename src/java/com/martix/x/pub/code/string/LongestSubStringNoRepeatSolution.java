@@ -24,11 +24,11 @@ import java.util.Set;
  * <p>
  * Created By Andrew-Geng on 2020/5/13 11:53 上午
  */
-public class NoRepeatStringSolution {
+public class LongestSubStringNoRepeatSolution {
 
     public static void main(String[] args) {
-        NoRepeatStringSolution noRepeatStringSolution = new NoRepeatStringSolution();
-        int i = noRepeatStringSolution.lengthOfLongestSubstring("pwwkew");
+        LongestSubStringNoRepeatSolution longestSubStringNoRepeatSolution = new LongestSubStringNoRepeatSolution();
+        int i = longestSubStringNoRepeatSolution.lengthOfLongestSubstring("pwwkew");
 
         System.out.println(i);
     }
