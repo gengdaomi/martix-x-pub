@@ -58,7 +58,7 @@ public class TopFrequencyAndOccurSolution {
     public static char getMaxOccurChar_1(String str) {
 
         int maxCount = 1;
-        Character result = new Character(str.charAt(0));
+        Character result = str.charAt(0);
 
         Map<Character, Integer> map = new LinkedHashMap<>();
         for (int i = 0; i < str.length(); i++) {
