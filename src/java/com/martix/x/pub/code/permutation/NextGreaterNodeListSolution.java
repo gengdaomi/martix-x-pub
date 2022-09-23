@@ -39,7 +39,7 @@ import java.util.Stack;
  * 对于链表中的每个节点，1 <= node.val <= 10^9
  * 给定列表的长度在 [0, 10000] 范围内
  */
-public class NextLargerNodesSolution {
+public class NextGreaterNodeListSolution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 7, 5, 1, 9, 2, 5, 1};
