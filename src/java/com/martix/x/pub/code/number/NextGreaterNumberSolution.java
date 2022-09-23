@@ -21,12 +21,12 @@ package com.martix.x.pub.code.number;
  * 输入：n = 21
  * 输出：-1
  */
-public class NextGreaterElement2Solution {
+public class NextGreaterNumberSolution {
 
     public static void main(String[] args) {
         int n = 2147483468;
 
-        int result = new NextGreaterElement2Solution().nextGreaterElement(n);
+        int result = new NextGreaterNumberSolution().nextGreaterElement(n);
         System.out.println(result);
     }
 
