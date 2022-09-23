@@ -15,7 +15,7 @@ import java.util.List;
  * 输入：root = [3,1,4,null,2], k = 1
  * 输出：1
  */
-public class FindKthSmallestNodeSolution {
+public class FindKthSmallestNodeBSTSolution {
 
     /**
      * 迭代 + 中序遍历

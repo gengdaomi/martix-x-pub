@@ -42,7 +42,7 @@ package com.martix.x.pub.code.tree;
  * \   \
  * 4   7
  */
-public class DeleteTreeNodeSolution {
+public class DeleteBSTNodeSolution {
 
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {

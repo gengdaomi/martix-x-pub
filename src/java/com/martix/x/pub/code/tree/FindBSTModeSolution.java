@@ -20,7 +20,7 @@ import java.util.List;
  * <p>
  * TODO 优化版的还没有搞，即使用Mirror 中序遍历的方式  ，这种可以保障空间复杂度是O(1)
  */
-public class FindModeSolution {
+public class FindBSTModeSolution {
 
     private int count = 0, maxCount = 0;
     private TreeNode preNode;
