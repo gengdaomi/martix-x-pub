@@ -18,7 +18,7 @@ import java.util.LinkedList;
  *
  *
  */
-public class RemoveNthNodeListSolution {
+public class RemoveNthBackwardNodeSolution {
 
     /**
      * 双指针 快慢指针
