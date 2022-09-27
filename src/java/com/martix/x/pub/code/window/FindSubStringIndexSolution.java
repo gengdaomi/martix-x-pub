@@ -29,7 +29,7 @@ import java.util.Map;
  * words = ["word","good","best","word"]
  * 输出：[]
  */
-public class FindSubStringSolution {
+public class FindSubStringIndexSolution {
 
     /**
      * 运用滑动窗口
@@ -112,6 +112,6 @@ public class FindSubStringSolution {
 
     public static void main(String[] args) {
         String[] s = new String[]{"foo", "bar"};
-        System.out.println(new FindSubStringSolution().findSubstring("barfoothefoobarman", s));
+        System.out.println(new FindSubStringIndexSolution().findSubstring("barfoothefoobarman", s));
     }
 }
