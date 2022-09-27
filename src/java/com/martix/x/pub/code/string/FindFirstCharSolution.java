@@ -11,15 +11,20 @@ public class FindFirstCharSolution {
         int[] count = new int[26];
         char[] strArr = str.toCharArray();
 
-        for (char c : strArr) {
+        for (char c : strArr) {  //计数每个字符的数量值
             count[c - 'a']++;
         }
 
-        for (char c : strArr) {
+        for (char c : strArr) { //重新遍历字符串各个字符，获取对应的数量值，当是1的时候 直接返回
             if (count[c - 'a'] == 1) {
                 return String.valueOf(c);
             }
         }
         return "cannot find char";
+    }
+
+    public static void main(String[] args){
+        String str = "zddsf";
+        System.out.println(new FindFirstCharSolution().execute(str));
     }
 }

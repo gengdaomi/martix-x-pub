@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.string;
+package com.martix.x.pub.code.top;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class TopFrequencyAndOccurSolution {
 
     public static void main(String[] args) {
-        char s = getMaxOccurChar("aaaaaaaaaaaaaaaaaahfdfbbbbbbbbbb");
+        char s = getMaxOccurChar("aaaahfdfbbbbbbbbbb");
         System.out.println(s);
     }
 
