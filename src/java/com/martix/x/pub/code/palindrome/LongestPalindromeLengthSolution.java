@@ -26,11 +26,11 @@ import java.util.Map;
  * 解释:
  * 我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
  */
-public class LongestPalindromeSolution {
+public class LongestPalindromeLengthSolution {
 
     public static void main(String[] args) {
         String s = "abccccdd";
-        System.out.println(new LongestPalindromeSolution().longestPalindrome(s));
+        System.out.println(new LongestPalindromeLengthSolution().longestPalindrome(s));
     }
 
     /**
