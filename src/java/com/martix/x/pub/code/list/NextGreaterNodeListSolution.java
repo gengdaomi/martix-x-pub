@@ -38,7 +38,7 @@ import java.util.Stack;
  * 对于链表中的每个节点，1 <= node.val <= 10^9
  * 给定列表的长度在 [0, 10000] 范围内
  */
-public class NextLargerNodesSolution {
+public class NextGreaterNodeListSolution {
 
     /**
      * 单调栈
@@ -139,28 +139,16 @@ public class NextLargerNodesSolution {
         return 0;
     }
 
-    public static void main(String[] args) {
-        int[] arr = new int[]{1, 7, 5, 1, 9, 2, 5, 1};
+    class ListNode {
 
-        ListNode head = new ListNode(1);
-        ListNode head1 = new ListNode(7);
-        ListNode head2 = new ListNode(5);
-        ListNode head3 = new ListNode(1);
-        ListNode head4 = new ListNode(9);
-        ListNode head5 = new ListNode(2);
-        ListNode head6 = new ListNode(5);
-        ListNode head7 = new ListNode(1);
+        int val;
+        ListNode next;
 
-        head.next = head1;
-        head1.next = head2;
-        head2.next = head3;
-        head3.next = head4;
-        head4.next = head5;
-        head5.next = head6;
-        head6.next = head7;
-        head7.next = null;
+        ListNode(int x) {
+            val = x;
+        }
 
-        int[] result = new NextLargerNodesSolution().nextLargerNodes_3(head);
-        System.out.println(result);
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
+
 }
