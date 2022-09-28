@@ -1,35 +1,73 @@
 package com.martix.x.pub.code.formula;
 
 /**
- * source: bytedancer
- * <p>
+ * Created by Andrew-Geng on 11:02 2022/9/12
  * x 的平方根
- * 实现 int sqrt(int x) 函数。
  * <p>
- * 计算并返回 x 的平方根，其中 x 是非负整数。
+ * 给你一个非负整数 x ，计算并返回x的 算术平方根 。
  * <p>
- * 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+ * 由于返回类型是整数，结果只保留 整数部分 ，小数部分将被 舍去 。
  * <p>
- * 示例 1:
+ * 注意：不允许使用任何内置指数函数和算符，例如 pow(x, 0.5) 或者 x ** 0.5 。
  * <p>
- * 输入: 4
- * 输出: 2
- * 示例 2:
+ * 输入：x = 4
+ * 输出：2
  * <p>
- * 输入: 8
- * 输出: 2
- * 说明: 8 的平方根是 2.82842...,
- * 由于返回类型是整数，小数部分将被舍去。
- * <p>
- * Created By Andrew-Geng on 2020/5/13 2:38 下午
+ * 输入：x = 8
+ * 输出：2
+ * 解释：8 的算术平方根是 2.82842..., 由于返回类型是整数，小数部分将被舍去。
  */
 public class MySqrtSolution {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         MySqrtSolution mySqrtSolution = new MySqrtSolution();
-        int result = mySqrtSolution.mySqrt(8);
-
+        int result = mySqrtSolution.mySqrt1(25);
         System.out.println(result);
+    }
+
+    /**
+     * 二分查找
+     * <p>
+     * 由于x的平方根整数部分result满足k^2<=x的最大k值，因此对k进行二分查找来得到答案；
+     * <p>
+     * 二分查找的下界为 0，上界可以粗略地设定为x。
+     * 在二分查找的每一步中，我们只需要比较中间元素 mid 的平方与x 的大小关系，并通过比较的结果调整上下界的范围。
+     * 由于我们所有的运算都是整数运算，不会存在误差，因此在得到最终的答案 result 后，也就不需要再去尝试 result+1 了
+     *
+     * @param x
+     * @return
+     */
+    public int mySqrt(int x) {
+        int left = 0, right = x, result = -1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if ((long) mid * mid <= x) {
+                result = mid;
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * 通过公式 2r=r+x/r ，不断的循环迭代 r的平方=x
+     *
+     * 这个通过不断的丢精度的方式，来处理
+     * @param x
+     * @return
+     */
+    public int mySqrt1(int x) {
+        long r = x;
+
+        while (r * r > x) {
+            r = (r + x / r) / 2;
+        }
+
+        return (int) r;
     }
 
     /**
@@ -38,7 +76,7 @@ public class MySqrtSolution {
      * @param x
      * @return
      */
-    public int mySqrt(int x) {
+    public int mySqrt2(int x) {
         if (x <= 1) {
             return x;
         }
@@ -59,22 +97,5 @@ public class MySqrtSolution {
         }
 
         return right;
-    }
-
-    /**
-     * 通过公式 2r=r+x/r ，不断的循环迭代 r的平方=x
-     *
-     * 这个通过不断的丢精度的方式，来处理
-     * @param x
-     * @return
-     */
-    public int mySqrt1(int x) {
-        long r = x;
-
-        while (r * r > x) {
-            r = (r + x / r) / 2;
-        }
-
-        return (int) r;
     }
 }
