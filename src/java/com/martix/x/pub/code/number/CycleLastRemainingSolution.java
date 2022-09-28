@@ -24,7 +24,7 @@ package com.martix.x.pub.code.number;
  *
  *参考  环形链表的约瑟夫问题
  */
-public class LastRemainingSolution {
+public class CycleLastRemainingSolution {
 
     /**
      * 数学 + 递归
