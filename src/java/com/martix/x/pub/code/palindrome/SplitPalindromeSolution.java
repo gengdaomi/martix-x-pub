@@ -67,7 +67,7 @@ public class SplitPalindromeSolution {
         return ret;
     }
 
-    public void dfs(String s, int i) {
+    private void dfs(String s, int i) {
         if (i == n) {
             ret.add(new ArrayList<String>(ans));
             return;
@@ -101,7 +101,7 @@ public class SplitPalindromeSolution {
         return ret;
     }
 
-    public void dfs_1(String s, int i) {
+    private void dfs_1(String s, int i) {
         if (i == n1) {
             ret.add(new ArrayList<String>(ans));
             return;
