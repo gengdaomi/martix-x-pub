@@ -36,7 +36,7 @@ import java.util.Set;
  * 输出: False
  *
  */
-public class SplitSequenceSolution {
+public class SplitArrayToConsecutiveSequenceSolution {
 
     /**
      * 哈希表 + 最小堆

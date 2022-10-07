@@ -30,7 +30,7 @@ import java.util.Arrays;
  * <p>
  * 请你设计时间复杂度为 O(n) 的算法解决本问题
  */
-public class SortedSquaresSolution {
+public class SortedArraySquaresSolution {
 
     /**
      * 双指针的方式
