@@ -16,7 +16,7 @@ package com.martix.x.pub.code.dymaic;
  * <p>
  * 输入: [-2,0,-1]
  * 输出: 0
- * 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
+ * 解释:结果不能为 2, 因为 [-2,-1] 不是子数组。
  */
 public class MaxMultiSubArraySolution {
 
