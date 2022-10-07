@@ -28,7 +28,7 @@ package com.martix.x.pub.code.dymaic;
  * babgbag
  *
  */
-public class CountSubSequenceSolution {
+public class SubSequenceCountSolution {
 
     /**
      * 动态规划

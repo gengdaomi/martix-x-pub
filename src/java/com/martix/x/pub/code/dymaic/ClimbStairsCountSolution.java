@@ -28,7 +28,7 @@ package com.martix.x.pub.code.dymaic;
  * 3.  2 阶 + 1 阶
  *
  */
-public class ClimbStairsSolution {
+public class ClimbStairsCountSolution {
 
     /**
      * 核心：动态规划

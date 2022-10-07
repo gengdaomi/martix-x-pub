@@ -31,7 +31,7 @@ import java.util.Arrays;
  * <p>
  * lc 392
  */
-public class CheckSubSequenceSolution {
+public class SubSequenceValidateSolution {
 
     /**
      * @param s
@@ -140,6 +140,6 @@ public class CheckSubSequenceSolution {
     public static void main(String[] args) {
         String s = "abc", t = "ahbgdc";
 
-        System.out.println(new CheckSubSequenceSolution().isSubsequence_1(s, t));
+        System.out.println(new SubSequenceValidateSolution().isSubsequence_1(s, t));
     }
 }

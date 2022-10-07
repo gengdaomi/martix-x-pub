@@ -27,7 +27,7 @@ package com.martix.x.pub.code.string;
  * 输入：s1 = "", s2 = "", s3 = ""
  * 输出：true
  */
-public class CheckInterLeaveStrSolution {
+public class InterLeaveStrValidateSolution {
 
     /**
      * 动态规划
