@@ -30,7 +30,7 @@ package com.martix.x.pub.code.arrays;
  * 输出：false
  * 解释：按下标 1 -> 1 -> 1 ... 的运动无法构成循环，因为循环的长度为 1 。根据定义，循环的长度必须大于 1 。
  */
-public class CheckCycleArraySolution {
+public class CycleArrayLoopValidateSolution {
 
     public boolean circularArrayLoop(int[] nums) {
         boolean hasCircle = false;

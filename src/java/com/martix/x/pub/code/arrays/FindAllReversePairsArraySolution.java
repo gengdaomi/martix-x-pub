@@ -16,6 +16,13 @@ package com.martix.x.pub.code.arrays;
  */
 public class FindAllReversePairsArraySolution {
 
+    public static void main(String[] args){
+        int[] arr = {7,5,6,4};
+        FindAllReversePairsArraySolution findAllReversePairsArraySolution  =new FindAllReversePairsArraySolution();
+        int result = findAllReversePairsArraySolution.reversePairs(arr);
+        System.out.println(result);
+    }
+
     /**
      *  思路： 借用归并排序
      *  归并的思路主要是分治思想，
@@ -40,7 +47,7 @@ public class FindAllReversePairsArraySolution {
         return count;
     }
 
-    public void merge(int[] nums, int left, int right) {
+    private void merge(int[] nums, int left, int right) {
         int mid = left + ((right - left) >> 1);
 
         if (left < right) {
@@ -50,7 +57,7 @@ public class FindAllReversePairsArraySolution {
         }
     }
 
-    public void mergeSort(int[] nums, int left, int mid, int right) {
+    private void mergeSort(int[] nums, int left, int mid, int right) {
         int[] tempArray = new int[right - left + 1];
         int index = 0;
         int temp1 = left, temp2 = mid + 1;
