@@ -24,7 +24,36 @@ public class SubArraySumKSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 1, 1, 2};
-        System.out.println(new SubArraySumKSolution().subarraySum_2(nums, 2));
+        System.out.println(new SubArraySumKSolution().subarraySum(nums, 2));
+    }
+
+    /**
+     * 前缀和+hashmap
+     * 优化升级版： 直接记录下有几个sum[j]和sum[i]-k相等，直接更新结果，就可以避免内循环
+     * <p>
+     * 时间复杂度O(N)
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    public int subarraySum(int[] nums, int k) {
+        Map<Integer, Integer> preSum = new HashMap<>(); //前缀和，key：前缀和，value:该前缀和的次数
+        preSum.put(0, 1);
+
+        int sum_i = 0, result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum_i = sum_i + nums[i];
+
+            int sum_j = sum_i - k; //这里是要找的前缀和nums[0..j]
+            if (preSum.containsKey(sum_j)) {
+                result += preSum.get(sum_j);
+            }
+
+            preSum.put(sum_i, preSum.getOrDefault(sum_i, 0) + 1);
+        }
+
+        return result;
     }
 
     /**
@@ -51,34 +80,6 @@ public class SubArraySumKSolution {
                     result++;
                 }
             }
-        }
-
-        return result;
-    }
-
-    /**
-     * 优化升级版： 直接记录下有几个sum[j]和sum[i]-k相等，直接更新结果，就可以避免内循环
-     * <p>
-     * 时间复杂度O(N)
-     *
-     * @param nums
-     * @param k
-     * @return
-     */
-    public int subarraySum_2(int[] nums, int k) {
-        Map<Integer, Integer> preSum = new HashMap<>(); //前缀和，key：前缀和，value:该前缀和的次数
-        preSum.put(0, 1);
-
-        int sum_i = 0, result = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum_i = sum_i + nums[i];
-
-            int sum_j = sum_i - k; //这里是要找的前缀和nums[0..j]
-            if (preSum.containsKey(sum_j)) {
-                result += preSum.get(sum_j);
-            }
-
-            preSum.put(sum_i, preSum.getOrDefault(sum_i, 0) + 1);
         }
 
         return result;
