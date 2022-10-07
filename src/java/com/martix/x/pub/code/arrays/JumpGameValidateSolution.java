@@ -19,7 +19,7 @@ package com.martix.x.pub.code.arrays;
  * 输出：false
  * 解释：无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0 ， 所以永远不可能到达最后一个下标。
  */
-public class JumpGameCheckSolution {
+public class JumpGameValidateSolution {
 
     /**
      * 贪心
