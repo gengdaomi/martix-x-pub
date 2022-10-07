@@ -25,6 +25,12 @@ package com.martix.x.pub.code.arrays;
  */
 public class Construct2dArraySolution {
 
+    public static void main(String[] args){
+        int[] arr = {3,2,4,5,7,1};
+        int[][] result = new Construct2dArraySolution().construct2DArray(arr,3,2);
+        System.out.println(result);
+    }
+
     /**
      * 设original 的长度为k，根据题意，如果k≠mn则无法构成二维数组，此时返回空数组。否则我们可以遍历
     original，每n 个元素创建一个一维数组，放入二维数组中
