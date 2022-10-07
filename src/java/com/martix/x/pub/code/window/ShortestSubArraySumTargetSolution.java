@@ -1,4 +1,4 @@
-package com.martix.x.pub.code.arrays;
+package com.martix.x.pub.code.window;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import java.util.List;
  * Created by Andrew-Geng on 3:51 下午 2021/4/28
  * <p>
  * 长度最小的子数组
+ * <p>
  * lc 209
  * <p>
  * 给定一个含有n个正整数的数组和一个正整数 target 。
  * <p>
- * 找出该数组中存在一个子数组满足其和 ≥ target， 长度最小的连续子数组[numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。
- * 如果不存在符合条件的子数组，返回 0 。
+ * 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组[numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。
  * <p>
  * 示例 1：
  * <p>
@@ -28,11 +28,11 @@ import java.util.List;
  * 输入：target = 11, nums = [1,1,1,1,1,1,1,1]
  * 输出：0
  */
-public class MinSumSubArrayTargetSolution {
+public class ShortestSubArraySumTargetSolution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{2, 3, 1, 2, 4, 3};
-        System.out.println(new MinSumSubArrayTargetSolution().minSubArrayLen(7, arr));
+        System.out.println(new ShortestSubArraySumTargetSolution().minSubArrayLen(7, arr));
     }
 
     /**
