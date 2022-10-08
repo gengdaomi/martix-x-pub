@@ -51,6 +51,11 @@ Activity table:
 解释：注意非活跃用户的记录不需要展示。
  */
 
+/**
+  解法：
+
+  datediff(date1,date2) 函数的使用方式：返回两个日期之间的天数，其中date1>date2
+ */
 select t.activity_date as day, count(distinct user_id) as active_users
        from Activity t
        where datediff('2019-07-27', t.activity_date) < 30 and t.activity_date < '2019-07-27'
