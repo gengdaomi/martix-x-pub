@@ -6,8 +6,8 @@ package com.martix.x.pub.code.list;
  */
 public class ListNode {
 
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode(int x) {
         val = x;
