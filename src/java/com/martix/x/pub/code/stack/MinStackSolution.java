@@ -12,12 +12,12 @@ import java.util.Stack;
  * * getMin() —— 检索栈中的最小元素
  * Created By Andrew-Geng on 2020/5/15 9:39 下午
  */
-public class MainStackSolution {
+public class MinStackSolution {
 
     Stack<Integer> dataStack = new Stack<>();
     Stack<Integer> minStack = new Stack<>();
 
-    public MainStackSolution() {
+    public MinStackSolution() {
 
     }
 
