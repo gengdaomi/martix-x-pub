@@ -9,7 +9,7 @@ package com.martix.x.pub.code.string;
  *
  * 要求：不允许使用先将36进制数字整体转为10进制，相加后再转回为36进制的做法
  */
-public class Add36StringSolution {
+public class TwoSum36BinStringSolution {
 
     private static final String chars = "0123456789abcdefghijklmnopqrstuvwxyz";
 
