@@ -62,7 +62,7 @@ public class FourSumSolution {
     private List<List<Integer>> threeSumTarget(int[] nums, int start, int target) {
         List<List<Integer>> result = new ArrayList<>();
         for (int i = start; i < nums.length; i++) { //穷举3sum的第一个数
-            List<List<Integer>> twoSumResult = new TwoSumNoRepeatSolution().twoSumTarget(nums, i + 1, target - nums[i]);
+            List<List<Integer>> twoSumResult = this.twoSumTarget(nums, i + 1, target - nums[i]);
 
             for (List<Integer> list : twoSumResult) {
                 list.add(nums[i]);
@@ -71,6 +71,49 @@ public class FourSumSolution {
 
             while (i < nums.length - 1 && nums[i] == nums[i + 1]) { //跳过第一个数字的重复情况，否则结果子数组中会出现重复，而2sum自行解决重复的数组问题
                 i++;
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * 获取nums中所有符合两数相加为target的子数组，且去重
+     *
+     * @param nums
+     * @param start
+     * @param target
+     * @return
+     */
+    private List<List<Integer>> twoSumTarget(int[] nums, int start, int target) {
+        List<List<Integer>> result = new ArrayList<>();
+
+        int left = start, right = nums.length - 1;
+        while (left < right) {
+            int sum = nums[left] + nums[right];
+            int leftVal = nums[left], rightVal = nums[right]; //左右下标对应的数值
+
+            if (sum == target) {
+                List<Integer> temp = new ArrayList<>();
+                temp.add(leftVal);
+                temp.add(rightVal);
+
+                result.add(temp);
+
+                while (left < right && nums[left] == leftVal) { //每次添加完一个子数组后，都持续判断后续数字是否和前一个相等
+                    left++;
+                }
+                while (left < right && nums[right] == rightVal) {//每次添加完一个子数组后，都持续判断后续数字是否和前一个相等
+                    right--;
+                }
+            } else if (sum > target) {
+                while (left < right && nums[right] == rightVal) {//每次添加完一个子数组后，都持续判断后续数字是否和前一个相等
+                    right--;
+                }
+            } else { //sum<target
+                while (left < right && nums[left] == leftVal) { //每次添加完一个子数组后，都持续判断后续数字是否和前一个相等
+                    left++;
+                }
             }
         }
 
