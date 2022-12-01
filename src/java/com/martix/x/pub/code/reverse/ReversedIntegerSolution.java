@@ -43,8 +43,8 @@ public class ReversedIntegerSolution {
      * @return
      */
     public int reverse_1(int x) {
-        boolean isNegative = x <= 0 ? true : false;
-        String s = Long.toString(isNegative ? -1l * x : x * 1l); //乘以-1l 为的是防止-2147483648 溢出
+        boolean isNegative = x <= 0;
+        String s = Long.toString(isNegative ? -1L * x : (long) x); //乘以-1l 为的是防止-2147483648 溢出
 
 
         int left = 0, right = s.length() - 1;
