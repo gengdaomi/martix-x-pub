@@ -1,8 +1,6 @@
 package com.martix.x.pub.code.heap;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -24,7 +22,7 @@ public class SmallestKSolution {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 3, 5, 7, 2, 4, 6, 8};
-        List<Integer> result = new SmallestKSolution().smallestK_1(arr, 4);
+        int[] result = new SmallestKSolution().smallestK(arr, 4);
         System.out.println(result);
     }
 
@@ -204,7 +202,7 @@ public class SmallestKSolution {
         if (i > k){
             qsort(arr, l, i - 1);
         }
-        
+
         if (i < k){
             qsort(arr, i + 1, r);
         }
