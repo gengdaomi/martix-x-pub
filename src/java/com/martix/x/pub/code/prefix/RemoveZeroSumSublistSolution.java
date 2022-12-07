@@ -78,23 +78,23 @@ public class RemoveZeroSumSublistSolution {
 
     public ListNode removeZeroSumSublists_1(ListNode head) {
         HashMap<Integer, ListNode> map = new HashMap<>();
-        int x = 0;
+        int sum = 0;
 
         map.put(0, new ListNode(0, head));
         for (ListNode node = head; node != null; node = node.next) {
-            x += node.val;
-            map.put(x, node);
+            sum += node.val;
+            map.put(sum, node);
         }
 
         head = map.get(0).next;
         ListNode first = head;
-        x = 0;
+        sum = 0;
 
         while (first != null) {
-            x += first.val;
+            sum += first.val;
 
-            if (map.containsKey(x)) {
-                first.next = map.get(x).next;
+            if (map.containsKey(sum)) {
+                first.next = map.get(sum).next;
             }
 
             first = first.next;
