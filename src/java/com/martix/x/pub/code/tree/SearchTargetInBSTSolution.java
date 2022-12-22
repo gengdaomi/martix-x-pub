@@ -11,7 +11,7 @@ package com.martix.x.pub.code.tree;
  输入：root = [4,2,7,1,3], val = 2
  输出：[2,1,3]
  */
-public class SearchBSTSolution {
+public class SearchTargetInBSTSolution {
 
     public TreeNode searchBST(TreeNode root, int val) {
         if (root == null) {

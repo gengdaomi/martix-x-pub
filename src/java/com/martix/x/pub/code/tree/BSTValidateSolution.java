@@ -11,7 +11,7 @@ package com.martix.x.pub.code.tree;
  * 节点的右子树只包含大于当前节点的数。
  * 所有左子树和右子树自身必须也是二叉搜索树。
  */
-public class ValidBSTSolution {
+public class BSTValidateSolution {
 
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, null, null);

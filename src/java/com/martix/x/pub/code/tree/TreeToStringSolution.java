@@ -38,7 +38,7 @@ package com.martix.x.pub.code.tree;
  * 解释: 和第一个示例相似，
  * 除了我们不能省略第一个对括号来中断输入和输出之间的一对一映射关系。
  */
-public class Tree2StringSolution {
+public class TreeToStringSolution {
 
     public String tree2str(TreeNode root) {
         if (root == null) {
