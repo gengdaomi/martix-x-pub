@@ -13,7 +13,7 @@ package com.martix.x.pub.code.tree;
  * 输入：root = [1,2,3,4,5,6]
  * 输出：6
  */
-public class CountNodeSolution {
+public class CountCompleteTreeNodeSolution {
 
     public int countNodes(TreeNode root) {
         TreeNode left = root, right = root;
