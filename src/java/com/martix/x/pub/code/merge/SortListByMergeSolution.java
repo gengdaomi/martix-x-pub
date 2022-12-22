@@ -1,7 +1,5 @@
 package com.martix.x.pub.code.merge;
 
-import com.martix.x.pub.code.list.ListNode;
-
 /**
  * 排序链表
  * lc 148
@@ -28,14 +26,14 @@ public class SortListByMergeSolution {
      * @param head
      * @return
      */
-    public com.martix.x.pub.code.list.ListNode sortList(com.martix.x.pub.code.list.ListNode head) {
+    public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
 
         // 使用快慢指针查找中间结点
-        com.martix.x.pub.code.list.ListNode fast = head;
-        com.martix.x.pub.code.list.ListNode slow = head;
+        ListNode fast = head;
+        ListNode slow = head;
         while (fast.next != null) {
             fast = fast.next.next;
 
@@ -47,10 +45,10 @@ public class SortListByMergeSolution {
         }
 
 
-        com.martix.x.pub.code.list.ListNode right = slow.next;
+        ListNode right = slow.next;
         slow.next = null; //注意断链
 
-        com.martix.x.pub.code.list.ListNode left = sortList(head);
+        ListNode left = sortList(head);
         right = sortList(right);
 
         return mergeTwoList(left, right);
@@ -63,8 +61,8 @@ public class SortListByMergeSolution {
      * @param l2
      * @return
      */
-    private com.martix.x.pub.code.list.ListNode mergeTwoList(com.martix.x.pub.code.list.ListNode l1, com.martix.x.pub.code.list.ListNode l2) {
-        com.martix.x.pub.code.list.ListNode result = null;
+    private ListNode mergeTwoList(ListNode l1, ListNode l2) {
+        ListNode result = null;
 
         if (l1 == null) {
             return l2;
@@ -84,7 +82,7 @@ public class SortListByMergeSolution {
         return result;
     }
 
-    private com.martix.x.pub.code.list.ListNode mergeTwoLists_1(com.martix.x.pub.code.list.ListNode l1, com.martix.x.pub.code.list.ListNode l2) {
+    private ListNode mergeTwoLists_1(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
         }
@@ -92,7 +90,7 @@ public class SortListByMergeSolution {
             return l1;
         }
 
-        com.martix.x.pub.code.list.ListNode head = new com.martix.x.pub.code.list.ListNode(0);
+        ListNode head = new ListNode(0);
         ListNode cur = head;
         while (l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
