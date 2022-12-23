@@ -34,11 +34,11 @@ import java.util.Arrays;
  * nums是一个非递减数组
  * -109<= target<= 109
  */
-public class SearchRangeArraySolution {
+public class SearchRangeArrayTargetSolution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{2, 2};
-        System.out.println(new SearchRangeArraySolution().searchRange(nums, 2));
+        System.out.println(new SearchRangeArrayTargetSolution().searchRange(nums, 2));
     }
 
     /**
