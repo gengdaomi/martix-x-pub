@@ -24,7 +24,7 @@ import java.util.Arrays;
  * 输出: true
  * 解释: 可由子串 "abc" 重复四次构成。 (或子串 "abcabc" 重复两次构成。)
  */
-public class RepeatedSubstringPatternSolution {
+public class RepeatedSubstringPatternValidateSolution {
 
     /**
      * 如果您的字符串 S 包含一个重复的子字符串，那么这意味着您可以多次 “移位和换行”`您的字符串，并使其与原始字符串匹配。
