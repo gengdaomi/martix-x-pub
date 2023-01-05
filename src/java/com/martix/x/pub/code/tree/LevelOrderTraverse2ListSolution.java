@@ -25,12 +25,15 @@ import java.util.*;
  * [15,7]
  * ]
  */
-public class LevelOrderTraverseSolution {
+public class LevelOrderTraverse2ListSolution {
 
     private List<List<Integer>> result = new ArrayList<>();
 
     /**
      * 借用队列的先进先出思路
+     *
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
      *
      * @param root
      * @return

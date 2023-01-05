@@ -1,7 +1,5 @@
 package com.martix.x.pub.code.sum;
 
-import com.martix.x.pub.code.list.ListNode;
-
 import java.util.Stack;
 
 /**
