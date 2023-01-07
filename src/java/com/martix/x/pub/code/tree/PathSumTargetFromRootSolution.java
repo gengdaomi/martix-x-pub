@@ -18,7 +18,7 @@ import java.util.*;
  * 输入：root = [1,2,3], targetSum = 5
  * 输出：[]
  */
-public class PathSumFromRootSolution {
+public class PathSumTargetFromRootSolution {
 
     private List<List<Integer>> result = new LinkedList<>();
     private List<Integer> path = new LinkedList<>();

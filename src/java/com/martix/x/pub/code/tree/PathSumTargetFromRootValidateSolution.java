@@ -15,7 +15,7 @@ package com.martix.x.pub.code.tree;
  * 输入：root = [1,2], targetSum = 0
  * 输出：false
  */
-public class PathSumTargetValidateSolution {
+public class PathSumTargetFromRootValidateSolution {
 
     /**
      * 递归的思路
