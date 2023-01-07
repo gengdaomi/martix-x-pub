@@ -34,6 +34,13 @@ package com.martix.x.pub.code.tree;
  */
 public class IsSubStructureSolution {
 
+    /**
+     * 遍历树A的每个节点，以每个节点为根节点判断是否存在以B为根节点的子树
+     *
+     * @param A
+     * @param B
+     * @return
+     */
     public boolean isSubStructure(TreeNode A, TreeNode B) {
         if (B == null || A == null) {
             return false;
@@ -44,6 +51,22 @@ public class IsSubStructureSolution {
         return isSubStructure(A.left, B) || isSubStructure(A.right, B);
     }
 
+    /**
+     * 判断树A以root1为根节点的子树 是否包含 树root2
+     * <p>
+     * 终止条件：
+     * 当节点B 为空：说明树B 已匹配完成（越过叶子节点），因此返回true ；
+     * 当节点A 为空：说明已经越过树A 叶子节点，即匹配失败，返回false ；
+     * 当节点A 和B 的值不同：说明匹配失败，返回false ；
+     * <p>
+     * 返回值：
+     * 判断A 和B 的左子节点是否相等，即 recur(A.left, B.left) ；
+     * 判断A 和B 的右子节点是否相等，即 recur(A.right, B.right)
+     *
+     * @param root1
+     * @param root2
+     * @return
+     */
     private boolean helper(TreeNode root1, TreeNode root2) {
         if (root2 == null) {
             return true;
