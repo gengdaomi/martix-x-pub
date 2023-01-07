@@ -39,13 +39,10 @@ public class LevelOrderTraverse2ArraySolution {
             return new int[0];
         }
 
-        Queue<TreeNode> queue = new LinkedList<>(){
-            {
-                add(root);
-            }};
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
 
         List<Integer> ans = new ArrayList<>();
-
         while(!queue.isEmpty()) {
             TreeNode node = queue.poll();
             ans.add(node.val);
@@ -53,14 +50,17 @@ public class LevelOrderTraverse2ArraySolution {
             if(node.left != null){
                 queue.add(node.left);
             }
+            
             if(node.right != null){
                 queue.add(node.right);
             }
         }
 
         int[] result = new int[ans.size()];
-        for(int i = 0; i < ans.size(); i++)
+        for(int i = 0; i < ans.size(); i++) {
             result[i] = ans.get(i);
+        }
+
         return result;
     }
 }
