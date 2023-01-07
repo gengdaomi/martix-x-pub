@@ -40,7 +40,7 @@ public class LevelOrderTraverse2ArraySolution {
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        queue.offer(root);
 
         List<Integer> ans = new ArrayList<>();
         while(!queue.isEmpty()) {
@@ -50,7 +50,7 @@ public class LevelOrderTraverse2ArraySolution {
             if(node.left != null){
                 queue.add(node.left);
             }
-            
+
             if(node.right != null){
                 queue.add(node.right);
             }
