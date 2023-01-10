@@ -1,7 +1,5 @@
 package com.martix.x.pub.code.reverse;
 
-import com.martix.x.pub.code.list.ListNode;
-
 /**
  * Created by Andrew-Geng on 21:22 2022/12/19
  * 反转偶数长度组的节点 lc2074

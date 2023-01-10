@@ -1,7 +1,5 @@
 package com.martix.x.pub.code.queue;
 
-import com.martix.x.pub.code.list.ListNode;
-
 /**
  * Created by Andrew-Geng on 21:08 2022/12/19
  * 设计循环队列 lc 622
