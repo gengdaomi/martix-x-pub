@@ -39,7 +39,7 @@ public class MatrixTransposeSolution {
                 transposed[j][i] = matrix[i][j];
             }
         }
-        
+
         return transposed;
     }
 
